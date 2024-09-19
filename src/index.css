@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+    html,
+    body {
+        @apply h-screen bg-themeDarkGrey text-themeLightGrey text-sm font-robotoMono subpixel-antialiased
+    }
+    #root {
+        @apply h-full
+    }
+    h1 {
+        @apply text-2xl font-protestGuerrilla text-themeCrimRed
+    }
+    h2 {
+        @apply text-lg font-protestGuerrilla text-themeCrimRed
+    }
+    input,
+    textarea {
+        @apply min-w-[400px] rounded-3xl p-2 text-themeCharcoal outline-none
+    }
+    textarea {
+        @apply min-h-[250px]
+    }
+    @screen sm {
+        body {
+            @apply text-lg
+        }
+        h1 {
+            @apply text-3xl
+        }
+        h2 {
+            @apply text-2xl
+        }
+    }
+}
