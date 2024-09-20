@@ -21,14 +21,18 @@ export default function Projects() {
               <span className='border px-2'>MongoDB</span>
             </p>
             <div className='flex gap-2 '>
-              <button className='border border-themeCrimRed rounded-md h-10 w-24 flex items-center gap-2 justify-center hover:bg-themeCrimRed'>
-                <CgLivePhoto />
-                <span>Demo</span>
-              </button>
-              <button className='border border-themeCrimRed rounded-md h-10 w-24 flex items-center gap-2 justify-center hover:bg-themeCrimRed'>
-                <FaGithub />
-                <span>Github</span>
-              </button>
+              <a href="" target='_blank'>
+                <button className='border border-themeCrimRed rounded-md h-10 w-24 flex items-center gap-2 justify-center hover:bg-themeCrimRed'>
+                  <CgLivePhoto />
+                  <span>Demo</span>
+                </button>
+              </a>
+              <a href="https://github.com/naijoesrinivasan/jam-jam" target='_blank'>
+                <button className='border border-themeCrimRed rounded-md h-10 w-24 flex items-center gap-2 justify-center hover:bg-themeCrimRed'>
+                  <FaGithub />
+                  <span>Github</span>
+                </button>
+              </a>
             </div>
           </div>
         </div>
@@ -46,14 +50,18 @@ export default function Projects() {
               <span className='border px-2'>PostgreSQL</span>
             </p>
             <div className='flex gap-2 '>
-              <button className='border border-themeCrimRed rounded-md h-10 w-24 flex items-center gap-2 justify-center hover:bg-themeCrimRed'>
-                <CgLivePhoto />
-                <span>Demo</span>
-              </button>
-              <button className='border border-themeCrimRed rounded-md h-10 w-24 flex items-center gap-2 justify-center hover:bg-themeCrimRed'>
-                <FaGithub />
-                <span>Github</span>
-              </button>
+              <a href="https://next-dashboard-dusky-three.vercel.app/" target='_blank'>
+                <button className='border border-themeCrimRed rounded-md h-10 w-24 flex items-center gap-2 justify-center hover:bg-themeCrimRed'>
+                  <CgLivePhoto />
+                  <span>Demo</span>
+                </button>
+              </a>
+              <a href="https://github.com/naijoesrinivasan/next-dashboard" target='_blank'>
+                <button className='border border-themeCrimRed rounded-md h-10 w-24 flex items-center gap-2 justify-center hover:bg-themeCrimRed'>
+                  <FaGithub />
+                  <span>Github</span>
+                </button>
+              </a>
             </div>
           </div>
         </div>
@@ -69,14 +77,18 @@ export default function Projects() {
               <span className='border px-2'>Firebase</span>
             </p>
             <div className='flex gap-2 '>
-              <button className='border border-themeCrimRed rounded-md h-10 w-24 flex items-center gap-2 justify-center hover:bg-themeCrimRed'>
-                <CgLivePhoto />
-                <span>Demo</span>
-              </button>
-              <button className='border border-themeCrimRed rounded-md h-10 w-24 flex items-center gap-2 justify-center hover:bg-themeCrimRed'>
-                <FaGithub />
-                <span>Github</span>
-              </button>
+              <a href="https://main--custom-notes123.netlify.app/" target='_blank'>
+                <button className='border border-themeCrimRed rounded-md h-10 w-24 flex items-center gap-2 justify-center hover:bg-themeCrimRed'>
+                  <CgLivePhoto />
+                  <span>Demo</span>
+                </button>
+              </a>
+              <a href="https://github.com/naijoesrinivasan/notes-app" target='_blank'>
+                <button className='border border-themeCrimRed rounded-md h-10 w-24 flex items-center gap-2 justify-center hover:bg-themeCrimRed'>
+                  <FaGithub />
+                  <span>Github</span>
+                </button>
+              </a>
             </div>
           </div>
         </div>
@@ -92,14 +104,18 @@ export default function Projects() {
               <span className='border px-2'>Firebase</span>
             </p>
             <div className='flex gap-2 '>
-              <button className='border border-themeCrimRed rounded-md h-10 w-24 flex items-center gap-2 justify-center hover:bg-themeCrimRed'>
-                <CgLivePhoto />
-                <span>Demo</span>
-              </button>
-              <button className='border border-themeCrimRed rounded-md h-10 w-24 flex items-center gap-2 justify-center hover:bg-themeCrimRed'>
-                <FaGithub />
-                <span>Github</span>
-              </button>
+              <a href="https://master--cozy-biscuit-cf55c3.netlify.app/" target='_blank'>
+                <button className='border border-themeCrimRed rounded-md h-10 w-24 flex items-center gap-2 justify-center hover:bg-themeCrimRed'>
+                  <CgLivePhoto />
+                  <span>Demo</span>
+                </button>
+              </a>
+              <a href="https://github.com/naijoesrinivasan/vanlife" target='_blank'>
+                <button className='border border-themeCrimRed rounded-md h-10 w-24 flex items-center gap-2 justify-center hover:bg-themeCrimRed'>
+                  <FaGithub />
+                  <span>Github</span>
+                </button>
+              </a>
             </div>
           </div>
         </div>
