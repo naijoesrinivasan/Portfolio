@@ -21,9 +21,9 @@ export default function About() {
   }
 
   return (
-    <main className='row-span-10 w-full flex flex-col gap-4 md:grid grid-cols-2 p-24 '>
+    <main className='row-span-10 p-6 flex flex-col gap-4 md:grid grid-cols-2 md:p-16 lg:p-20'>
       <div className='col-span-1'>
-        <h2 className='mb-2'>About Me</h2>
+        <h1 className='mb-2'>About Me</h1>
         <p>I'm a versatile Software Developer, self-taught in modern technologies like React, Next.js, and Express. 
         With experience in full stack development, I’ve worked on everything from API integrations to optimizing ETL pipelines. 
         My projects prioritize SEO, accessibility, and responsive design, ensuring top-notch user experiences. From building web apps to 
@@ -39,18 +39,18 @@ export default function About() {
       </div>
       
       <div className='col-span-1 overflow-scroll flex flex-col gap-6 relative'>
-        <div className='flex w-full justify-center gap-4 sticky top-0'>
+        <div className='flex justify-center gap-4 sticky top-0'>
           <button className={clsx(
-            'border border-themeCrimRed rounded-md h-12 w-32',
+            'border border-themeCrimRed rounded-md h-12 w-24',
             { 'bg-themeCrimRed ' : stack === 'All'})} onClick={() => handleStack("All")}>All</button>
           <button className={clsx(
-            'border border-themeCrimRed rounded-md h-12 w-32',
+            'border border-themeCrimRed rounded-md h-12 w-24',
             { 'bg-themeCrimRed ' : stack === 'Frontend'})} onClick={() => handleStack("Frontend")}>Frontend</button>
           <button className={clsx(
-            'border border-themeCrimRed rounded-md h-12 w-32',
+            'border border-themeCrimRed rounded-md h-12 w-24',
             { 'bg-themeCrimRed ' : stack === 'Backend'})} onClick={() => handleStack("Backend")}>Backend</button>
           <button className={clsx(
-            'border border-themeCrimRed rounded-md h-12 w-32',
+            'border border-themeCrimRed rounded-md h-12 w-24',
             { 'bg-themeCrimRed ' : stack === 'Database'})} onClick={() => handleStack("Database")}>Database</button>
         </div>
         <div className='flex flex-row flex-wrap justify-center items-center gap-10'>

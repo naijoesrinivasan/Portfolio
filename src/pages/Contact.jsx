@@ -31,7 +31,7 @@ export default function Contact() {
 
   return (
     <main className='row-span-10 w-full'>
-      <section className="p-10 h-full flex flex-col gap-2 md:gap-4 justify-center">
+      <section className="p-4 md:p-10 h-full flex flex-col gap-2 md:gap-4 justify-center">
         <h1 className='text-center'>Send me a message</h1> 
         <form className='flex flex-col gap-2 items-center' onSubmit={handleSubmit}>
           <div>
