@@ -21,8 +21,8 @@ export default function About() {
   }
 
   return (
-    <main className='row-span-10 p-6 flex flex-col gap-4 md:grid grid-cols-2 md:p-16 lg:p-20'>
-      <div className='col-span-1'>
+    <main className='row-span-10 p-6 gap-4 flex flex-col md:grid grid-cols-2 md:p-16 lg:p-20'>
+      <div className='md:col-span-1'>
         <h1 className='mb-2'>About Me</h1>
         <p>I'm a versatile Software Developer, self-taught in modern technologies like React, Next.js, and Express. 
         With experience in full stack development, I’ve worked on everything from API integrations to optimizing ETL pipelines. 
@@ -30,16 +30,16 @@ export default function About() {
         analyzing large datasets, I thrive on solving challenges across different domains. Lately, I've been diving into Three.js to add 
         more interactive 3D elements to my projects.</p>
         <button 
-          className='mt-2 md:mt-6 border border-red-500 px-4 py-2 flex items-center gap-1 rounded-md hover:bg-themeCrimRed'
+          className='mt-2 md:mt-6 border border-themeCrimRed px-4 py-2 flex items-center gap-1 rounded-md hover:bg-themeCrimRed'
           onClick={openResume}
         >
           <IoMdDownload className=''/> 
           <span className='text-md'>View My Reśumé</span>
         </button>
       </div>
-      
-      <div className='col-span-1 overflow-scroll flex flex-col gap-6 relative'>
-        <div className='flex justify-center gap-4 sticky top-0'>
+
+      <div className='md:col-span-1 flex flex-col gap-6 z-20 overflow-scroll'>
+        <div className='flex justify-center gap-4'>
           <button className={clsx(
             'border border-themeCrimRed rounded-md h-12 w-24',
             { 'bg-themeCrimRed ' : stack === 'All'})} onClick={() => handleStack("All")}>All</button>
@@ -53,9 +53,9 @@ export default function About() {
             'border border-themeCrimRed rounded-md h-12 w-24',
             { 'bg-themeCrimRed ' : stack === 'Database'})} onClick={() => handleStack("Database")}>Database</button>
         </div>
-        <div className='flex flex-row flex-wrap justify-center items-center gap-10'>
+        <div className='flex flex-row flex-wrap justify-center items-center gap-10 overflow-scroll'>
           <div className={clsx(
-            'flex flex-row items-center transition-opacity duration-300  gap-4',
+            'flex flex-row items-center transition-opacity duration-300 gap-4',
             { 'hidden': stack !== 'Frontend' && stack !== 'All' },
             { 'opacity-0': isTransitioning},
             { 'opacity-100': !isTransitioning})}>
