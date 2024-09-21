@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigation } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 
 export default function Contact() {
@@ -8,7 +8,8 @@ export default function Contact() {
     email: "",
     message: ""
   })
-  const navigate = useNavigate();
+  const navigation = useNavigation();
+  console.log(navigation.state)
 
   function handleChange(e)  {
     const { name, value } = e.target;
