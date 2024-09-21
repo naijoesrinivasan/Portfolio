@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { redirect, useNavigation, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 
 export default function Contact() {

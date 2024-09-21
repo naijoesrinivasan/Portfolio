@@ -21,7 +21,7 @@ export default function About() {
   }
 
   return (
-    <main className='row-span-10 p-6 gap-4 flex flex-col md:grid grid-cols-2 md:p-16 lg:p-20'>
+    <main className='row-span-10 p-10 gap-4 flex flex-col md:grid grid-cols-2 md:p-16 lg:p-20'>
       <div className='md:col-span-1'>
         <h1 className='mb-2'>About Me</h1>
         <p>I'm a versatile Software Developer, self-taught in modern technologies like React, Next.js, and Express. 
