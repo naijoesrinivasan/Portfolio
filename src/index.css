@@ -21,7 +21,7 @@
     }
     input,
     textarea {
-        @apply min-w-[400px] rounded-3xl p-2 text-themeCharcoal outline-none
+        @apply min-w-[300px] rounded-3xl p-2 text-themeCharcoal outline-none
     }
     textarea {
         @apply min-h-[250px]
@@ -35,6 +35,12 @@
         }
         h2 {
             @apply text-2xl
+        }
+    }
+    @screen md {
+        input,
+        textarea {
+            @apply min-w-[400px]
         }
     }
 }
