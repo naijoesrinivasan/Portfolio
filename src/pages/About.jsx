@@ -40,16 +40,16 @@ export default function About() {
       <div className='md:col-span-1 flex flex-col gap-6 z-20 overflow-scroll w-full'>
         <div className='flex justify-center gap-4'>
           <button className={clsx(
-            'border border-themeCrimRed rounded-md h-12 w-24',
+            'border border-themeCrimRed rounded-md h-12 w-20 sm:w-24',
             { 'bg-themeCrimRed ' : stack === 'All'})} onClick={() => handleStack("All")}>All</button>
           <button className={clsx(
-            'border border-themeCrimRed rounded-md h-12 w-24',
+            'border border-themeCrimRed rounded-md h-12 w-20 sm:w-24',
             { 'bg-themeCrimRed ' : stack === 'Frontend'})} onClick={() => handleStack("Frontend")}>Frontend</button>
           <button className={clsx(
-            'border border-themeCrimRed rounded-md h-12 w-24',
+            'border border-themeCrimRed rounded-md h-12 w-20 sm:w-24',
             { 'bg-themeCrimRed ' : stack === 'Backend'})} onClick={() => handleStack("Backend")}>Backend</button>
           <button className={clsx(
-            'border border-themeCrimRed rounded-md h-12 w-24',
+            'border border-themeCrimRed rounded-md h-12 w-20 sm:w-24',
             { 'bg-themeCrimRed ' : stack === 'Database'})} onClick={() => handleStack("Database")}>Database</button>
         </div>
         <div className='flex flex-row flex-wrap justify-center items-center gap-10 overflow-scroll'>
