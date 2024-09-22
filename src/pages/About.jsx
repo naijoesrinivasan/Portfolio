@@ -11,7 +11,6 @@ export default function About() {
     setIsTransitioning(true);
     setStack(stack);
     setTimeout(() => {
-      
       setIsTransitioning(false);
     }, 300);
   }
@@ -21,7 +20,7 @@ export default function About() {
   }
 
   return (
-    <main className='row-span-10 p-10 gap-4 flex flex-col md:grid grid-cols-2 md:p-16 lg:p-20'>
+    <main className='row-span-10 w-full p-6 md:p-16 lg:p-20 flex flex-col gap-4 md:grid grid-cols-2 '>
       <div className='md:col-span-1'>
         <h1 className='mb-2'>About Me</h1>
         <p>I'm a versatile Software Developer, self-taught in modern technologies like React, Next.js, and Express. 
@@ -38,7 +37,7 @@ export default function About() {
         </button>
       </div>
 
-      <div className='md:col-span-1 flex flex-col gap-6 z-20 overflow-scroll'>
+      <div className='md:col-span-1 flex flex-col gap-6 z-20 overflow-scroll w-full'>
         <div className='flex justify-center gap-4'>
           <button className={clsx(
             'border border-themeCrimRed rounded-md h-12 w-24',

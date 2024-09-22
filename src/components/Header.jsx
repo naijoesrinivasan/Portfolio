@@ -5,7 +5,6 @@ import clsx from 'clsx';
 
 export default function Header() {
   const [showMenu, setShowMenu] = useState(false);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const location = useLocation();
 
   useEffect(() => {
@@ -23,7 +22,6 @@ export default function Header() {
 
   function handleMenu() {
     setShowMenu(!showMenu);
-    console.log("Menu: ", showMenu)
   }
 
   return (
@@ -34,6 +32,9 @@ export default function Header() {
       </div>
       <div className={clsx(
         "hidden sm:flex flex-row gap-4 md:gap-6 p-4")} >
+        <Link to="/" className={clsx(
+          'hover:text-themeCrimRed hover:scale-105',
+          { 'text-themeCrimRed scale-105' : location.pathname === '/'})}><p>Home</p></Link>
         <Link to="/about" className={clsx(
           'hover:text-themeCrimRed hover:scale-105',
           { 'text-themeCrimRed scale-105' : location.pathname === '/about'})}><p>About</p></Link>
@@ -48,7 +49,12 @@ export default function Header() {
         'block sm:hidden cursor-pointer',
         {'hidden' : showMenu})} size={25} onClick={handleMenu}/>
         {showMenu && (
-          <div className={clsx("absolute top-0 right-0 flex flex-col h-[120px]  w-24 bg-[#262626] rounded-bl-lg overflow-hidden")} onClick={handleMenu}>
+          <div className={clsx("absolute top-0 right-0 flex flex-col h-[150px]  w-28 bg-[#262626] rounded-bl-lg overflow-hidden")} onClick={handleMenu}>
+              <div className="hover:bg-themeCrimRed flex-1 flex items-center justify-center">
+                <Link to='/'>
+                  <p className='ml-2'>Home</p>
+                </Link>
+              </div>
               <div className="hover:bg-themeCrimRed flex-1 flex items-center justify-center">
                 <Link to='/about'>
                   <p className='ml-2'>About</p>

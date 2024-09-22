@@ -4,8 +4,8 @@ import { CgLivePhoto } from 'react-icons/cg';
 
 export default function Projects() {
   return (
-    <main className='row-span-10 flex flex-col gap-4 overflow-scroll relative p-6 md:p-10'>
-      <h2 className='mt-4'>My Work</h2>
+    <main className='row-span-10 flex flex-col gap-4 overflow-scroll relative p-6 md:p-10 w-full'>
+      <h1 className='mt-4'>My Work</h1>
       <section className="flex-1 p-4 flex flex-col overflow-scroll gap-4 lg:grid grid-cols-2 grid-rows-2 lg:gap-6 lg:p-1 ">
         <div className="col-span-1 row-span-1 flex flex-col lg:flex-row justify-center items-center gap-4 p-4">
           <img src="/jam-jam.png" alt="" className='lg:max-w-[350px] rounded-xl'/>

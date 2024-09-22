@@ -28,7 +28,7 @@
     }
     @screen sm {
         body {
-            @apply text-lg
+            @apply text-base
         }
         h1 {
             @apply text-3xl

@@ -35,19 +35,18 @@ export default function HomeLayout() {
   }, [location])
 
 
-  console.log(location.pathname)
   return (
     <div className='h-full grid grid-rows-12 relative'>
        <Header />
        <Outlet />
        <Footer /> 
        <Link to={prevPage}>
-        <span className='absolute bottom-[80px] md:top-1/2 hover:cursor-pointer ml-2 hover:text-themeCrimRed'>
+        <span className='absolute bottom-[120px] md:top-1/2 hover:cursor-pointer ml-2 hover:text-themeCrimRed'>
           <GrFormPrevious size={30}/>
         </span>
        </Link>
        <Link to={nextPage}>
-        <span className='absolute bottom-[80px] md:top-1/2 right-0 hover:cursor-pointer mr-2 hover:text-themeCrimRed'>
+        <span className='absolute bottom-[120px] md:top-1/2 right-0 hover:cursor-pointer mr-2 hover:text-themeCrimRed'>
           <GrFormNext size={30}/>
         </span>
        </Link>
