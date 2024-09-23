@@ -23,8 +23,21 @@ export default {
             roboto: "Roboto",
             protestGuerrilla: "Protest Guerrilla",
             robotoMono: "Roboto Mono",
-            inter: "Inter"
+            inter: "Inter",
+            arvo: "Arvo"
         }
     },
-    plugins: [],
+    plugins: [
+        function({ addUtilities }) {
+            addUtilities({
+                '.bg-clip-text': {
+                    'background-clip': 'text',
+                    '-webkit-background-clip': 'text',
+                },
+                '.text-fill-transparent': {
+                    '-webkit-text-fill-color': 'transparent',
+                },
+            });
+        }
+    ],
 }

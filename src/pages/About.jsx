@@ -16,11 +16,11 @@ export default function About() {
   }
 
   function openResume() {
-    window.open('Naijoe Srinivasan.pdf')
+    window.open('Naijoe Srinivasan_Full Stack Developer.pdf')
   }
 
   return (
-    <main className='row-span-10 w-full p-6 md:p-16 lg:p-20 flex flex-col gap-4 md:grid grid-cols-2 '>
+    <main className='row-span-10 w-full p-6 md:p-16 lg:p-20 flex flex-col gap-4 md:gap-10 md:grid grid-cols-2'>
       <div className='md:col-span-1'>
         <h1 className='mb-2'>About Me</h1>
         <p>I'm a versatile Software Developer, self-taught in modern technologies like React, Next.js, and Express. 
@@ -37,7 +37,8 @@ export default function About() {
         </button>
       </div>
 
-      <div className='md:col-span-1 flex flex-col gap-6 z-20 overflow-scroll w-full'>
+      <div className='md:col-span-1 flex flex-col gap-6 z-20 w-full overflow-scroll'>
+        <h1 className=''>Tech Stack</h1>
         <div className='flex justify-center gap-4'>
           <button className={clsx(
             'border border-themeCrimRed rounded-md h-12 w-20 sm:w-24',
