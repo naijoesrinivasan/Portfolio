@@ -13,8 +13,8 @@ export default function Footer() {
   })
 
   return (
-    <footer className='row-span-1 flex flex-col w-full shadow-2xl shadow-themeLightGrey p-2'>
-      <div className="flex flex-row flex-1 justify-center items-center gap-10 text-themeCrimRed ">
+    <footer className='flex flex-col w-full p-2 border border-opacity-10 border-themeNeonGreen rounded-full gap-2'>
+      <div className="flex flex-row flex-1 justify-center items-center gap-10 md:gap-20 text-themeNeonGreen ">
         <a href="https://github.com/naijoesrinivasan" target='_'><FaGithub size={iconSize}/></a>
         <a href="https://www.linkedin.com/in/naijoesrinivasan/" target='_'><FaLinkedinIn size={iconSize}/></a>
         <a href="mailto:naijoesrinivasan99@gmail.com"><MdEmail size={iconSize}/></a>

@@ -39,10 +39,9 @@ export default function Contact() {
 
 
   return (
-    <main className='row-span-10 w-full'>
-      <section className="p-4 md:p-10 h-full flex flex-col gap-2 md:gap-4 justify-center items-center">
+    <section className="section-paddings flex flex-col gap-2 md:gap-4 justify-center items-center md:h-screen" id="contact">
         <h1 className='text-center'>Send me a message</h1> 
-        <form className='md:w-full flex flex-col items-center gap-2' onSubmit={handleSubmit}>
+      <form className='flex flex-col items-center gap-2' onSubmit={handleSubmit}>
           <div className='flex flex-col gap-1'>
             <label htmlFor="name">Name</label>
             <input 
@@ -75,12 +74,11 @@ export default function Contact() {
           </div>  
           {success && <p>Your message has been sent successfully!</p>}
           <button type='submit' className={clsx(
-            'px-6 py-2 rounded-lg bg-themeDarkRed hover:bg-themeCrimRed',
+            'px-6 py-2 rounded-lg bg-themeNeonGreen hover:bg-themeNeonGreen bg-opacity-50 hover:bg-opacity-60',
             {'disabled' : navState === 'submitting'})}>
             {navState === 'idle' ? 'Submit' : 'Submitting'}
           </button>
         </form>
-      </section>
-    </main>
+    </section>
   )
 }

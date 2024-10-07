@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link'
 import { CgMenuOreos } from 'react-icons/cg';
 import clsx from 'clsx';
 
 export default function Header() {
   const [showMenu, setShowMenu] = useState(false);
   const location = useLocation();
+  console.log("Header location: ", location)
 
   useEffect(() => {
 
@@ -25,50 +27,63 @@ export default function Header() {
   }
 
   return (
-    <header className='row-span-1 flex flex-row justify-between px-6 items-center shadow-md shadow-themeLightGrey'>
+    <header className='mt-2 md:mt-8 sticky border border-opacity-10 border-themeSpringGreen rounded-full top-0 z-50 backdrop-blur-xl flex flex-row justify-between px-6 py-2 items-center' id='home'>
+      {/* <div className="absolute w-full border blur-[1px] border-themeLightGrey bottom-0" /> */}
+      <div className='absolute top-0 z-1 nav-gradient text-white border-2 border-green-500 w-full h-[50px]' />
       <div className='flex flex-row justify-start items-center'>
-        <Link to="/"><img src="/avatar.png" className='h-16 rounded-full mr-5' alt="" /></Link>
-        <h1 className=''>welcome to my portfolio</h1>
+        <h2 className='font-bold text-[color:#f5f5f5]'>NS</h2>
       </div>
-      <div className={clsx(
-        "hidden sm:flex flex-row gap-4 md:gap-6 p-4")} >
-        <Link to="/" className={clsx(
-          'hover:text-themeCrimRed hover:scale-105',
-          { 'text-themeCrimRed scale-105' : location.pathname === '/'})}><p>Home</p></Link>
-        <Link to="/about" className={clsx(
-          'hover:text-themeCrimRed hover:scale-105',
-          { 'text-themeCrimRed scale-105' : location.pathname === '/about'})}><p>About</p></Link>
-        <Link to="/projects" className={clsx(
-          'hover:text-themeCrimRed hover:scale-105',
-          { 'text-themeCrimRed scale-105' : location.pathname === '/projects'})}><p>Projects</p></Link>
-        <Link to="/contact" className={clsx(
-          'hover:text-themeCrimRed hover:scale-105',
-          { 'text-themeCrimRed scale-105' : location.pathname === '/contact'})}><p>Contact</p></Link>
+      <div className={clsx("hidden sm:flex flex-row gap-4 md:gap-6 z-10")} >
+        <HashLink
+          to="#hero" className={clsx(
+            'hover:text-themeNeonGreen hover:scale-105',
+            { 'text-themeNeonGreen scale-105': location.hash === '#hero' })}
+        >
+          <p>Home</p>
+        </HashLink>
+        <HashLink to="#about" className={clsx(
+          'hover:text-themeNeonGreen hover:scale-105',
+          { 'text-themeNeonGreen scale-105': location.hash === '#about' })}
+        >
+          <p>About</p>
+        </HashLink>
+        <HashLink to="#projects" className={clsx(
+          'hover:text-themeNeonGreen hover:scale-105',
+          { 'text-themeNeonGreen scale-105': location.hash === '#projects' })}
+        >
+          <p>Projects</p>
+        </HashLink>
+        <HashLink to="#contact" className={clsx(
+          'hover:text-themeNeonGreen hover:scale-105',
+          { 'text-themeNeonGreen scale-105': location.hash === '#contact' })}
+        >
+          <p>Contact</p>
+        </HashLink>
       </div>
       <CgMenuOreos className={clsx(
         'block sm:hidden cursor-pointer',
         {'hidden' : showMenu})} size={25} onClick={handleMenu}/>
         {showMenu && (
           <div className={clsx("absolute top-0 right-0 flex flex-col h-[150px]  w-28 bg-[#262626] rounded-bl-lg overflow-hidden")} onClick={handleMenu}>
-              <div className="hover:bg-themeCrimRed flex-1 flex items-center justify-center">
-                <Link to='/'>
+          <div className="hover:bg-themeNeonGreen flex-1 flex items-center justify-center">
+            <HashLink to='#hero'>
                   <p className='ml-2'>Home</p>
-                </Link>
+            </HashLink>
               </div>
-              <div className="hover:bg-themeCrimRed flex-1 flex items-center justify-center">
-                <Link to='/about'>
+          <div className="hover:bg-themeNeonGreen flex-1 flex items-center justify-center">
+            <HashLink to='#about'>
                   <p className='ml-2'>About</p>
-                </Link>
+            </HashLink>
               </div>
-              <div className="hover:bg-themeCrimRed flex-1 flex items-center justify-center">
-                <Link to='/projects'>
+          <div className="hover:bg-themeNeonGreen flex-1 flex items-center justify-center">
+            <HashLink to='#projects'>
                   <p className='ml-2'>Projects</p>
-                </Link>
+            </HashLink>
               </div>
-              <div className="hover:bg-themeCrimRed flex-1 flex items-center justify-center">
-                <Link to='/contact'>
+          <div className="hover:bg-themeNeonGreen flex-1 flex items-center justify-center">
+            <HashLink to='#contact'>
                   <p className='ml-2'>Contact</p>
-                </Link>
+            </HashLink>
               </div>
           </div>
         )}

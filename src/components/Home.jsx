@@ -1,8 +1,12 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import { Outlet, useLocation, Link } from 'react-router-dom';
 import { GrFormNext, GrFormPrevious } from 'react-icons/gr';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Header from './Header';
+import Footer from './Footer';
+import Hero from './Hero';
+import About from '../pages/About';
+import Projects from '../pages/Projects';
+import Contact from '../pages/Contact'
 
 
 export default function HomeLayout() {
@@ -12,7 +16,7 @@ export default function HomeLayout() {
 
   useEffect(() => {
     function findNext() {
-      switch(location.pathname) {
+      switch (location.pathname) {
         case '/': return '/about';
         case '/about': return '/projects';
         case '/projects': return '/contact';
@@ -21,12 +25,12 @@ export default function HomeLayout() {
     }
 
     function findPrev() {
-      switch(location.pathname) {
+      switch (location.pathname) {
         case '/': return '/contact';
         case '/about': return '/';
         case '/projects': return '/about';
         case '/contact': return '/projects';
-      }    
+      }
     }
 
     setNextPage(findNext());
@@ -36,20 +40,13 @@ export default function HomeLayout() {
 
 
   return (
-    <div className='h-full grid grid-rows-12 relative'>
-       <Header />
-       <Outlet />
-       <Footer /> 
-       <Link to={prevPage}>
-        <span className='absolute bottom-[120px] md:top-1/2 hover:cursor-pointer ml-2 hover:text-themeCrimRed'>
-          <GrFormPrevious size={30}/>
-        </span>
-       </Link>
-       <Link to={nextPage}>
-        <span className='absolute bottom-[120px] md:top-1/2 right-0 hover:cursor-pointer mr-2 hover:text-themeCrimRed'>
-          <GrFormNext size={30}/>
-        </span>
-       </Link>
-    </div>
+    <>
+      <Header />
+      <Hero />
+      <About />
+      <Projects />
+      <Contact />
+      <Footer />
+    </>
   )
 }

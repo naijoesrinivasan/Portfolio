@@ -16,8 +16,13 @@ export default {
                 themeFirebrick: "#B22222",
                 themeRubyRed: "#9B111E",
                 themeDarkRed: "#8B0000",
-                themeIndianRed: "#CD5C5C"
-            }
+                themeIndianRed: "#CD5C5C",
+                themeHeadWhite: "#f5f5f5",
+                themeTextWhite: "#e0e0e0"
+            },
+            fontFamily: {
+                eudoxus: ["Eudoxus-Sans", "sans-serif"]
+            },
         },
         fontFamily: {
             roboto: "Roboto",

@@ -20,16 +20,17 @@ export default function About() {
   }
 
   return (
-    <main className='row-span-10 w-full p-6 md:p-16 lg:p-20 flex flex-col gap-4 md:gap-10 md:grid grid-cols-2'>
-      <div className='md:col-span-1'>
-        <h1 className='mb-2'>About Me</h1>
-        <p>I'm a versatile Software Developer, self-taught in modern technologies like React, Next.js, and Express. 
+    <main className='relative section-paddings w-full flex flex-col gap-6 md:gap-10 md:h-screen' id='about'>
+      {/* <div className='absolute top-[200px] hero-gradient text-white z-20  w-full h-1/2 blur-[200px]' /> */}
+      <div className='z-30 '>
+        <h1 className='mb-2 text-themeHeadWhite'>About Me</h1>
+        <p className='text-themeTextWhite'>I'm a versatile Software Developer, self-taught in modern technologies like React, Next.js, and Express. 
         With experience in full stack development, I’ve worked on everything from API integrations to optimizing ETL pipelines. 
         My projects prioritize SEO, accessibility, and responsive design, ensuring top-notch user experiences. From building web apps to 
         analyzing large datasets, I thrive on solving challenges across different domains. Lately, I've been diving into Three.js to add 
         more interactive 3D elements to my projects.</p>
         <button 
-          className='mt-2 md:mt-6 border border-themeCrimRed px-4 py-2 flex items-center gap-1 rounded-md hover:bg-themeCrimRed'
+          className='mt-2 md:mt-6 border border-themeNeonGreen px-4 py-2 flex items-center gap-1 rounded-md hover:bg-themeNeonGreen hover:bg-opacity-50'
           onClick={openResume}
         >
           <IoMdDownload className=''/> 
@@ -37,23 +38,9 @@ export default function About() {
         </button>
       </div>
 
-      <div className='md:col-span-1 flex flex-col gap-6 z-20 w-full overflow-scroll'>
-        <h1 className=''>Tech Stack</h1>
-        <div className='flex justify-center gap-4'>
-          <button className={clsx(
-            'border border-themeCrimRed rounded-md h-12 w-20 sm:w-24',
-            { 'bg-themeCrimRed ' : stack === 'All'})} onClick={() => handleStack("All")}>All</button>
-          <button className={clsx(
-            'border border-themeCrimRed rounded-md h-12 w-20 sm:w-24',
-            { 'bg-themeCrimRed ' : stack === 'Frontend'})} onClick={() => handleStack("Frontend")}>Frontend</button>
-          <button className={clsx(
-            'border border-themeCrimRed rounded-md h-12 w-20 sm:w-24',
-            { 'bg-themeCrimRed ' : stack === 'Backend'})} onClick={() => handleStack("Backend")}>Backend</button>
-          <button className={clsx(
-            'border border-themeCrimRed rounded-md h-12 w-20 sm:w-24',
-            { 'bg-themeCrimRed ' : stack === 'Database'})} onClick={() => handleStack("Database")}>Database</button>
-        </div>
-        <div className='flex flex-row flex-wrap justify-center items-center gap-10 overflow-scroll'>
+      <div className='flex flex-col z-20 gap-2 w-full h-[440px] md:h-[660px]'>
+        <h1 className=''>Skills</h1>
+        <div className='flex flex-row flex-wrap justify-center items-center gap-10 overflow-auto'>
           <div className={clsx(
             'flex flex-row items-center transition-opacity duration-300 gap-4',
             { 'hidden': stack !== 'Frontend' && stack !== 'All' },
@@ -67,8 +54,10 @@ export default function About() {
                 value={5} 
                 readOnly 
                 precision={0.5}
-                sx={{'& .MuiRating-iconFilled': { color: '#DC143C' },
-                      '& .MuiRating-iconEmpty': { color: '#DC143C' }}} 
+                sx={{
+                  '& .MuiRating-iconFilled': { color: '#39ff14' },
+                  '& .MuiRating-iconEmpty': { color: '#39ff14' }
+                }} 
                 />
             </div>
           </div>
@@ -85,8 +74,10 @@ export default function About() {
                 value={4.5} 
                 readOnly 
                 precision={0.5}
-                sx={{'& .MuiRating-iconFilled': { color: '#DC143C' },
-                      '& .MuiRating-iconEmpty': { color: '#DC143C' }}} 
+                sx={{
+                  '& .MuiRating-iconFilled': { color: '#39ff14' },
+                  '& .MuiRating-iconEmpty': { color: '#39ff14' }
+                }} 
                 />
             </div>
           </div>
@@ -103,8 +94,10 @@ export default function About() {
                 value={5} 
                 readOnly 
                 precision={0.5}
-                sx={{'& .MuiRating-iconFilled': { color: '#DC143C' },
-                      '& .MuiRating-iconEmpty': { color: '#DC143C' }}} 
+                sx={{
+                  '& .MuiRating-iconFilled': { color: '#39ff14' },
+                  '& .MuiRating-iconEmpty': { color: '#39ff14' }
+                }} 
                 />
             </div>
           </div>
@@ -121,8 +114,10 @@ export default function About() {
                 value={5} 
                 readOnly 
                 precision={0.5}
-                sx={{'& .MuiRating-iconFilled': { color: '#DC143C' },
-                      '& .MuiRating-iconEmpty': { color: '#DC143C' } }} 
+                sx={{
+                  '& .MuiRating-iconFilled': { color: '#39ff14' },
+                  '& .MuiRating-iconEmpty': { color: '#39ff14' }
+                }} 
                 />
             </div>
           </div>
@@ -139,8 +134,10 @@ export default function About() {
                 value={4.5} 
                 readOnly 
                 precision={0.5}
-                sx={{'& .MuiRating-iconFilled': { color: '#DC143C' },
-                      '& .MuiRating-iconEmpty': { color: '#DC143C' }}} 
+                sx={{
+                  '& .MuiRating-iconFilled': { color: '#39ff14' },
+                  '& .MuiRating-iconEmpty': { color: '#39ff14' }
+                }} 
                 />
             </div>
           </div>
@@ -157,8 +154,10 @@ export default function About() {
                 value={4.5} 
                 readOnly 
                 precision={0.5}
-                sx={{'& .MuiRating-iconFilled': { color: '#DC143C' },
-                      '& .MuiRating-iconEmpty': { color: '#DC143C' }}} 
+                sx={{
+                  '& .MuiRating-iconFilled': { color: '#39ff14' },
+                  '& .MuiRating-iconEmpty': { color: '#39ff14' }
+                }} 
                 />
             </div>
           </div>
@@ -175,8 +174,10 @@ export default function About() {
                 value={5} 
                 readOnly 
                 precision={0.5}
-                sx={{'& .MuiRating-iconFilled': { color: '#DC143C' },
-                      '& .MuiRating-iconEmpty': { color: '#DC143C' }}} 
+                sx={{
+                  '& .MuiRating-iconFilled': { color: '#39ff14' },
+                  '& .MuiRating-iconEmpty': { color: '#39ff14' }
+                }} 
                 />
             </div>
           </div>
@@ -193,8 +194,10 @@ export default function About() {
                 value={5} 
                 readOnly 
                 precision={0.5}
-                sx={{'& .MuiRating-iconFilled': { color: '#DC143C' },
-                      '& .MuiRating-iconEmpty': { color: '#DC143C' }}} 
+                sx={{
+                  '& .MuiRating-iconFilled': { color: '#39ff14' },
+                  '& .MuiRating-iconEmpty': { color: '#39ff14' }
+                }} 
                 />
             </div>
           </div>
@@ -211,8 +214,10 @@ export default function About() {
                 value={4} 
                 readOnly 
                 precision={0.5}
-                sx={{'& .MuiRating-iconFilled': { color: '#DC143C' },
-                      '& .MuiRating-iconEmpty': { color: '#DC143C' }}} 
+                sx={{
+                  '& .MuiRating-iconFilled': { color: '#39ff14' },
+                  '& .MuiRating-iconEmpty': { color: '#39ff14' }
+                }} 
                 />
             </div>
           </div>
@@ -229,8 +234,10 @@ export default function About() {
                 value={4} 
                 readOnly 
                 precision={0.5}
-                sx={{'& .MuiRating-iconFilled': { color: '#DC143C' },
-                      '& .MuiRating-iconEmpty': { color: '#DC143C' }}} 
+                sx={{
+                  '& .MuiRating-iconFilled': { color: '#39ff14' },
+                  '& .MuiRating-iconEmpty': { color: '#39ff14' }
+                }} 
                 />
             </div>
           </div>
@@ -247,8 +254,10 @@ export default function About() {
                 value={5} 
                 readOnly 
                 precision={0.5}
-                sx={{'& .MuiRating-iconFilled': { color: '#DC143C' },
-                      '& .MuiRating-iconEmpty': { color: '#DC143C' }}} 
+                sx={{
+                  '& .MuiRating-iconFilled': { color: '#39ff14' },
+                  '& .MuiRating-iconEmpty': { color: '#39ff14' }
+                }} 
                 />
             </div>
           </div>
@@ -265,8 +274,10 @@ export default function About() {
                 value={4.5} 
                 readOnly 
                 precision={0.5}
-                sx={{'& .MuiRating-iconFilled': { color: '#DC143C' },
-                      '& .MuiRating-iconEmpty': { color: '#DC143C' }}} 
+                sx={{
+                  '& .MuiRating-iconFilled': { color: '#39ff14' },
+                  '& .MuiRating-iconEmpty': { color: '#39ff14' }
+                }} 
                 />
             </div>
           </div>
@@ -283,8 +294,10 @@ export default function About() {
                 value={4} 
                 readOnly 
                 precision={0.5}
-                sx={{'& .MuiRating-iconFilled': { color: '#DC143C' },
-                      '& .MuiRating-iconEmpty': { color: '#DC143C' }}} 
+                sx={{
+                  '& .MuiRating-iconFilled': { color: '#39ff14' },
+                  '& .MuiRating-iconEmpty': { color: '#39ff14' }
+                }} 
                 />
             </div>
           </div>
