@@ -8,12 +8,15 @@ export default function Header() {
   const [showMenu, setShowMenu] = useState(false);
   const location = useLocation();
   console.log("Header location: ", location)
+  console.log("Show Menu: ", showMenu)
 
   useEffect(() => {
 
     function handleResize() {
       if(window.innerWidth > 640)
         setShowMenu(false);
+      else
+        setShowMenu(true)
       return null;
     }
 
@@ -27,13 +30,14 @@ export default function Header() {
   }
 
   return (
-    <header className='mt-2 md:mt-8 sticky border border-opacity-10 border-themeSpringGreen rounded-full top-0 z-50 backdrop-blur-xl flex flex-row justify-between px-6 py-2 items-center' id='home'>
-      {/* <div className="absolute w-full border blur-[1px] border-themeLightGrey bottom-0" /> */}
-      <div className='absolute top-0 z-1 nav-gradient text-white border-2 border-green-500 w-full h-[50px]' />
-      <div className='flex flex-row justify-start items-center'>
-        <h2 className='font-bold text-[color:#f5f5f5]'>NS</h2>
-      </div>
-      <div className={clsx("hidden sm:flex flex-row gap-4 md:gap-6 z-10")} >
+    <header className='mt-2 md:mt-8 sticky rounded-full top-0 z-20 backdrop-blur-xl bg-black flex flex-row justify-between px-6 py-2 items-center' id='home'>
+      <div className='absolute top-0 z-1 nav-gradient text-themeHeadWhite border-2 border-green-500 w-full h-[50px]' />
+      <HashLink to='#hero'>
+        <div className='flex flex-row justify-start items-center cursor-pointer'>
+          <h2 className='font-inter font-extrabold tracking-tighter z-10 hover:scale-[1.05]'>NS</h2>
+        </div>
+      </HashLink>
+      <div className={clsx("flex flex-row gap-4 md:gap-6 z-10")} >
         <HashLink
           to="#hero" className={clsx(
             'hover:text-themeNeonGreen hover:scale-105',
@@ -60,11 +64,11 @@ export default function Header() {
           <p>Contact</p>
         </HashLink>
       </div>
-      <CgMenuOreos className={clsx(
-        'block sm:hidden cursor-pointer',
+      {/* <CgMenuOreos className={clsx(
+        'block sm:hidden cursor-pointer z-10',
         {'hidden' : showMenu})} size={25} onClick={handleMenu}/>
         {showMenu && (
-          <div className={clsx("absolute top-0 right-0 flex flex-col h-[150px]  w-28 bg-[#262626] rounded-bl-lg overflow-hidden")} onClick={handleMenu}>
+        <div className={clsx("z-50 absolute top-0 right-0 flex flex-col h-[150px]  w-28 bg-[#262626] rounded-bl-lg overflow-hidden")} onClick={handleMenu}>
           <div className="hover:bg-themeNeonGreen flex-1 flex items-center justify-center">
             <HashLink to='#hero'>
                   <p className='ml-2'>Home</p>
@@ -86,7 +90,7 @@ export default function Header() {
             </HashLink>
               </div>
           </div>
-        )}
+        )} */}
       
     </header>
   )

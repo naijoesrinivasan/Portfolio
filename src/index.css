@@ -71,13 +71,10 @@
             /* Neon Red */
             #00f6ff,
             /* Neon Blue */
-            #c724b1,
-            /* Neon Purple */
-            #f4f700
-            /* Neon Yellow */
+            #c724b1
         );
-    filter: blur(50px);
+    filter: blur(80px);
     /* Halo blur effect */
-    opacity: 0.2;
+    opacity: 0.5;
     /* Adjust the opacity for more or less intensity */
 }

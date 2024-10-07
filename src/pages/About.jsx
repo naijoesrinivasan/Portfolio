@@ -20,7 +20,7 @@ export default function About() {
   }
 
   return (
-    <main className='relative section-paddings w-full flex flex-col gap-6 md:gap-10 md:h-screen' id='about'>
+    <main className='z-10 relative section-paddings w-full flex flex-col gap-6 md:gap-10 md:h-screen' id='about'>
       {/* <div className='absolute top-[200px] hero-gradient text-white z-20  w-full h-1/2 blur-[200px]' /> */}
       <div className='z-30 '>
         <h1 className='mb-2 text-themeHeadWhite'>About Me</h1>
@@ -55,8 +55,8 @@ export default function About() {
                 readOnly 
                 precision={0.5}
                 sx={{
-                  '& .MuiRating-iconFilled': { color: '#39ff14' },
-                  '& .MuiRating-iconEmpty': { color: '#39ff14' }
+                  '& .MuiRating-iconFilled': { color: '#059669' },
+                  '& .MuiRating-iconEmpty': { color: '#059669' }
                 }} 
                 />
             </div>
@@ -75,8 +75,8 @@ export default function About() {
                 readOnly 
                 precision={0.5}
                 sx={{
-                  '& .MuiRating-iconFilled': { color: '#39ff14' },
-                  '& .MuiRating-iconEmpty': { color: '#39ff14' }
+                  '& .MuiRating-iconFilled': { color: '#059669' },
+                  '& .MuiRating-iconEmpty': { color: '#059669' }
                 }} 
                 />
             </div>
@@ -95,8 +95,8 @@ export default function About() {
                 readOnly 
                 precision={0.5}
                 sx={{
-                  '& .MuiRating-iconFilled': { color: '#39ff14' },
-                  '& .MuiRating-iconEmpty': { color: '#39ff14' }
+                  '& .MuiRating-iconFilled': { color: '#059669' },
+                  '& .MuiRating-iconEmpty': { color: '#059669' }
                 }} 
                 />
             </div>
@@ -115,8 +115,8 @@ export default function About() {
                 readOnly 
                 precision={0.5}
                 sx={{
-                  '& .MuiRating-iconFilled': { color: '#39ff14' },
-                  '& .MuiRating-iconEmpty': { color: '#39ff14' }
+                  '& .MuiRating-iconFilled': { color: '#059669' },
+                  '& .MuiRating-iconEmpty': { color: '#059669' }
                 }} 
                 />
             </div>
@@ -135,8 +135,8 @@ export default function About() {
                 readOnly 
                 precision={0.5}
                 sx={{
-                  '& .MuiRating-iconFilled': { color: '#39ff14' },
-                  '& .MuiRating-iconEmpty': { color: '#39ff14' }
+                  '& .MuiRating-iconFilled': { color: '#059669' },
+                  '& .MuiRating-iconEmpty': { color: '#059669' }
                 }} 
                 />
             </div>
@@ -155,8 +155,8 @@ export default function About() {
                 readOnly 
                 precision={0.5}
                 sx={{
-                  '& .MuiRating-iconFilled': { color: '#39ff14' },
-                  '& .MuiRating-iconEmpty': { color: '#39ff14' }
+                  '& .MuiRating-iconFilled': { color: '#059669' },
+                  '& .MuiRating-iconEmpty': { color: '#059669' }
                 }} 
                 />
             </div>
@@ -175,8 +175,8 @@ export default function About() {
                 readOnly 
                 precision={0.5}
                 sx={{
-                  '& .MuiRating-iconFilled': { color: '#39ff14' },
-                  '& .MuiRating-iconEmpty': { color: '#39ff14' }
+                  '& .MuiRating-iconFilled': { color: '#059669' },
+                  '& .MuiRating-iconEmpty': { color: '#059669' }
                 }} 
                 />
             </div>
@@ -195,8 +195,8 @@ export default function About() {
                 readOnly 
                 precision={0.5}
                 sx={{
-                  '& .MuiRating-iconFilled': { color: '#39ff14' },
-                  '& .MuiRating-iconEmpty': { color: '#39ff14' }
+                  '& .MuiRating-iconFilled': { color: '#059669' },
+                  '& .MuiRating-iconEmpty': { color: '#059669' }
                 }} 
                 />
             </div>
@@ -215,8 +215,8 @@ export default function About() {
                 readOnly 
                 precision={0.5}
                 sx={{
-                  '& .MuiRating-iconFilled': { color: '#39ff14' },
-                  '& .MuiRating-iconEmpty': { color: '#39ff14' }
+                  '& .MuiRating-iconFilled': { color: '#059669' },
+                  '& .MuiRating-iconEmpty': { color: '#059669' }
                 }} 
                 />
             </div>
@@ -235,8 +235,8 @@ export default function About() {
                 readOnly 
                 precision={0.5}
                 sx={{
-                  '& .MuiRating-iconFilled': { color: '#39ff14' },
-                  '& .MuiRating-iconEmpty': { color: '#39ff14' }
+                  '& .MuiRating-iconFilled': { color: '#059669' },
+                  '& .MuiRating-iconEmpty': { color: '#059669' }
                 }} 
                 />
             </div>
@@ -255,8 +255,8 @@ export default function About() {
                 readOnly 
                 precision={0.5}
                 sx={{
-                  '& .MuiRating-iconFilled': { color: '#39ff14' },
-                  '& .MuiRating-iconEmpty': { color: '#39ff14' }
+                  '& .MuiRating-iconFilled': { color: '#059669' },
+                  '& .MuiRating-iconEmpty': { color: '#059669' }
                 }} 
                 />
             </div>
@@ -275,8 +275,8 @@ export default function About() {
                 readOnly 
                 precision={0.5}
                 sx={{
-                  '& .MuiRating-iconFilled': { color: '#39ff14' },
-                  '& .MuiRating-iconEmpty': { color: '#39ff14' }
+                  '& .MuiRating-iconFilled': { color: '#059669' },
+                  '& .MuiRating-iconEmpty': { color: '#059669' }
                 }} 
                 />
             </div>
@@ -295,8 +295,8 @@ export default function About() {
                 readOnly 
                 precision={0.5}
                 sx={{
-                  '& .MuiRating-iconFilled': { color: '#39ff14' },
-                  '& .MuiRating-iconEmpty': { color: '#39ff14' }
+                  '& .MuiRating-iconFilled': { color: '#059669' },
+                  '& .MuiRating-iconEmpty': { color: '#059669' }
                 }} 
                 />
             </div>
