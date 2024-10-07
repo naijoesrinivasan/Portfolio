@@ -39,11 +39,10 @@ export default function Contact() {
 
 
   return (
-    <section className="section-paddings flex flex-col gap-2 md:gap-4 justify-center items-center md:h-screen" id="contact">
-        <h1 className='text-center'>Send me a message</h1> 
+    <section className="section-paddings flex flex-col md:flex-row md:justify-around gap-2 md:gap-4 justify-center items-center md:h-screen" id="contact">
+      <h1 className='text-center'>Say Hello</h1>
       <form className='flex flex-col items-center gap-2' onSubmit={handleSubmit}>
-          <div className='flex flex-col gap-1'>
-            <label htmlFor="name">Name</label>
+        <div className='flex flex-col gap-1'>
             <input 
               type="text" 
               placeholder="Name" 
@@ -52,8 +51,7 @@ export default function Contact() {
               className='block'
               onChange={handleChange}/>
           </div>
-          <div className='flex flex-col gap-1'>
-            <label htmlFor="email">Email</label>
+        <div className='flex flex-col gap-1'>
             <input 
               type="email" 
               name="email" 
@@ -62,8 +60,7 @@ export default function Contact() {
               className='block'
               onChange={handleChange}/>
           </div>
-          <div className='flex flex-col gap-1'>
-            <label htmlFor="message">Message</label>
+        <div className='flex flex-col gap-1'>
             <textarea 
               type="text" 
               placeholder='Message' 

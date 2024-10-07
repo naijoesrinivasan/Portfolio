@@ -24,7 +24,7 @@
     }
     input,
     textarea {
-        @apply w-[300px] md:w-[450px] rounded-3xl p-2 text-themeCharcoal outline-none
+        @apply w-[300px] md:w-[450px] rounded-3xl p-2 text-themeTextWhite border border-opacity-10 border-themeNeonGreen bg-inherit
     }
     textarea {
         @apply h-[250px] md:h-[400px]
