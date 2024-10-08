@@ -7,10 +7,10 @@
 @layer base {
     html,
     body {
-        @apply w-full bg-themeDarkGrey text-themeTextWhite font-eudoxus subpixel-antialiased lg:max-w-[1280px] mx-auto
-    }
+        @apply w-[100vw] bg-themeDarkGrey text-themeTextWhite font-eudoxus subpixel-antialiased lg:max-w-[1280px] mx-auto overflow-x-hidden sm:overflow-x-visible
+        }
     #root {
-
+        @apply w-full
     }
     h1 {
         @apply text-2xl font-eudoxus text-themeHeadWhite font-semibold
@@ -20,11 +20,11 @@
         }
         
         p {
-            @apply text-[18px]
+            @apply text-[16px] md:text-[18px] lg:text-[24px]
     }
     input,
     textarea {
-        @apply w-[300px] md:w-[450px] rounded-3xl p-2 text-themeTextWhite border border-opacity-10 border-themeNeonGreen bg-inherit
+        @apply w-[300px] md:w-[450px] rounded-3xl p-2 text-themeTextWhite border border-opacity-30 border-themeNeonGreen bg-inherit focus:outline-none focus:border-opacity-80
     }
     textarea {
         @apply h-[250px] md:h-[400px]
@@ -48,7 +48,7 @@
     }
 }
 .section-paddings {
-    @apply p-8 md:p-16 lg:p-20
+    @apply p-12 md:p-16 lg:p-20
 }
 
 .black-red-gradient {
@@ -64,17 +64,6 @@
 }
 
 .nav-gradient {
-    background: linear-gradient(90deg,
-            #39ff14,
-            /* Neon Green */
-            #ff073a,
-            /* Neon Red */
-            #00f6ff,
-            /* Neon Blue */
-            #c724b1
-        );
-    filter: blur(80px);
-    /* Halo blur effect */
-    opacity: 0.5;
-    /* Adjust the opacity for more or less intensity */
-}
+    background: linear-gradient(90deg, #f5f5f5, #39ff14, #ff073a, #00f6ff, #c724b1, #f5f5f5, #fb923c);
+        /* opacity: 1; */
+    }

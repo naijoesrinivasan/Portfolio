@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { slideFromTop, slideFromBottom } from '../utils/motionVariants';
 import emailjs from '@emailjs/browser';
 import clsx from 'clsx';
 
@@ -39,9 +41,21 @@ export default function Contact() {
 
 
   return (
-    <section className="section-paddings flex flex-col md:flex-row md:justify-around gap-2 md:gap-4 justify-center items-center md:h-screen" id="contact">
-      <h1 className='text-center'>Say Hello</h1>
-      <form className='flex flex-col items-center gap-2' onSubmit={handleSubmit}>
+    <section className="section-paddings flex flex-col md:flex-row md:justify-around gap-4 md:gap-8 justify-center items-center md:h-screen" id="contact">
+      <motion.h1
+        variants={slideFromBottom}
+        initial="hide"
+        whileInView="show"
+        className=''
+      >
+        Say Hello
+      </motion.h1>
+      <motion.form
+        variants={slideFromTop}
+        initial="hide"
+        whileInView="show"
+        className='flex flex-col items-center gap-2' onSubmit={handleSubmit}
+      >
         <div className='flex flex-col gap-1'>
             <input 
               type="text" 
@@ -69,13 +83,17 @@ export default function Contact() {
               className='block'
               onChange={handleChange}/>
           </div>  
-          {success && <p>Your message has been sent successfully!</p>}
+        {success &&
+          <AnimatePresence>
+            <motion.p>Your message has been sent successfully!</motion.p>
+          </AnimatePresence>
+        }
           <button type='submit' className={clsx(
             'px-6 py-2 rounded-lg bg-themeNeonGreen hover:bg-themeNeonGreen bg-opacity-50 hover:bg-opacity-60',
             {'disabled' : navState === 'submitting'})}>
             {navState === 'idle' ? 'Submit' : 'Submitting'}
           </button>
-        </form>
+      </motion.form>
     </section>
   )
 }
