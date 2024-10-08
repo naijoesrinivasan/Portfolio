@@ -10,7 +10,7 @@
         @apply w-[100vw] bg-themeDarkGrey text-themeTextWhite font-eudoxus subpixel-antialiased lg:max-w-[1280px] mx-auto overflow-x-hidden sm:overflow-x-visible
         }
     #root {
-        @apply w-full
+        @apply w-full h-fit
     }
     h1 {
         @apply text-2xl font-eudoxus text-themeHeadWhite font-semibold

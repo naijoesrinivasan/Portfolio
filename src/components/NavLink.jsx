@@ -3,7 +3,6 @@ import { HashLink } from 'react-router-hash-link/dist/react-router-hash-link.cjs
 import clsx from 'clsx'
 
 export default function NavLink({ location, name }) {
-  console.log("Name: ", name, ", Location: ", location.hash)
   return (
     <HashLink
       to={name === 'Home' ? '#hero' : `#${name.toLowerCase()}`}

@@ -5,22 +5,19 @@ import { Rating } from '@mui/material';
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
 import { div } from 'framer-motion/client';
+import SkillIcon from './SkillIcon';
 
-export default function SkillCard({ name, imgUrl, level }) {
+export default function SkillCard({ category, skills }) {
+  console.log("Category: ", category)
+  console.log("Skill: ", skills)
   return (
-    <motion.img animate={{
-      scale: [1, 1.1, 1.1, 1, 1],
-      rotate: [0, 0, 270, 270, 0],
-      borderRadius: ["20%", "20%", "50%", "50%", "20%"],
-    }}
-      transition={{
-        duration: 2,
-        ease: "easeInOut",
-        times: [0, 0.2, 0.5, 0.8, 1],
-        repeatDelay: 1
-      }}
-      layout
-      src={imgUrl} alt="" className='h-[80px] md:h-[100px] aspect-square' />
+    <div className="flex flex-col gap-2 px-4 py-2 rounded-xl outline-dashed outline-inset-2 outline-emerald-600">
+      <p>{category}</p>
+      <SkillIcon skills={skills} />
+    </div>
+  )
+}
+// <img src={imgUrl} alt="" className='h-[80px] md:h-[100px] aspect-square' />
     // {/* <div className='flex flex-col'>
     //   <p>{name}</p>
     //   <Rating
@@ -33,7 +30,4 @@ export default function SkillCard({ name, imgUrl, level }) {
     //       '& .MuiRating-iconEmpty': { color: '#059669' }
     //     }}
     //   />
-    // </div> */}
-
-  )
-}
+// </div> */}

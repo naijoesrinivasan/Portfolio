@@ -11,8 +11,6 @@ import Sidebar from './Sidebar';
 export default function Header() {
   const [showMenu, setShowMenu] = useState(false);
   const location = useLocation();
-  console.log("Header location: ", location)
-  console.log("Show Menu: ", showMenu)
 
   useEffect(() => {
 
@@ -46,13 +44,12 @@ export default function Header() {
         animate="show"
         className='fixed top-0 left-0 z-1 nav-gradient w-full h-[50px] blur-[60px] sm:blur-[80px]'
       />
-      <HashLink to='#hero'>
+      <HashLink to='/'>
         <div className='flex flex-row justify-start items-center cursor-pointer'>
           <h2 className='font-inter font-extrabold tracking-tighter z-10 hover:scale-[1.05] text-themeTextWhite'>NS</h2>
         </div>
       </HashLink>
       <div className={clsx("hidden sm:flex flex-row gap-4 md:gap-6 z-10")} >
-        <NavLink name="Home" location={location} />
         <NavLink name="About" location={location} />
         <NavLink name="Projects" location={location} />
         <NavLink name="Contact" location={location} />

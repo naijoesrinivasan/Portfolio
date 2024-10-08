@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { slideFromTop, slideFromBottom } from '../utils/motionVariants';
+import { slideFromTop, slideFromBottom, waveVariant } from '../utils/motionVariants';
 import emailjs from '@emailjs/browser';
 import clsx from 'clsx';
 
@@ -48,7 +48,7 @@ export default function Contact() {
         whileInView="show"
         className=''
       >
-        Say Hello
+        Say Hello <motion.span variants={waveVariant} initial="preWave" whileInView="wave">👋</motion.span>
       </motion.h1>
       <motion.form
         variants={slideFromTop}

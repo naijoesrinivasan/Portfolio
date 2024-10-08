@@ -97,3 +97,41 @@ export const heroHover = {
     scale: [1, 1.05, 1]
   }
 }
+
+export const projectCardVariant = {
+  tilt: {
+    rotateY: "360deg",
+  },
+  untilt :{
+    rotateY: 0,
+    transition: {
+      duration: 1,
+      delay: 3
+    }
+  }
+}
+
+export const waveVariant = {
+  preWave: {
+    rotateY: "180deg"
+  },
+  wave: {
+    rotateY: 0,
+    transition: {
+      duration: 1
+    }
+  } 
+}
+
+export const glitchVariants = {
+  visible: {
+    x: [0, 5, 0, -5, 0, 5, 0], 
+    opacity: [1, 0.7, 0.3, 1],
+    transition: {
+      duration: 0.1,
+      repeat: 10,
+      repeatType: 'loop',
+      ease: 'easeInOut',
+    },
+  },
+};

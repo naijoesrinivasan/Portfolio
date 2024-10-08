@@ -7,6 +7,7 @@ import { motion } from 'framer-motion';
 import { skills } from '../utils/data';
 
 export default function About() {
+  console.log(skills)
   function openResume() {
     window.open('Naijoe Srinivasan_Full Stack Developer.pdf')
   }
@@ -16,9 +17,8 @@ export default function About() {
       initial={{ opacity: 0, scale: 0 }}
       whileInView={{ opacity: 1, scale: 1 }}
       transition={{ duration: 1 }}
-      className='z-10 relative section-paddings w-full flex flex-col md:flex-row items-center gap-16 md:gap-24 md:h-screen' id='about'>
-      <div
-        className='z-30 lg:w-[660px] gap-4 md:gap-8 flex flex-col justify-center'>
+      className='z-10 relative section-paddings w-full flex flex-col justify-center items-center gap-16 md:gap-24 ' id='about'>
+      <div className='z-30 gap-4 md:gap-8 flex flex-col justify-center'>
         <h1 className='text-themeHeadWhite '>About Me</h1>
         <p className='text-themeTextWhite '>I'm a versatile Software Developer, self-taught in modern technologies like React, Next.js, and Express. 
         With experience in full stack development, I’ve worked on everything from API integrations to optimizing ETL pipelines. 
@@ -33,13 +33,11 @@ export default function About() {
           <span className='text-md'>View My Reśumé</span>
         </button>
       </div>
-      <div className='grid grid-cols-4 shrink-0 grid-rows-4 w-fit hover:gap-2 self-center'>
-        {skills.map(skill => (
-          <SkillCard
-            name={skill.name}
-            imgUrl={skill.imgUrl}
-            level={skill.level}
-          />))}
+      <div className='flex flex-col w-full lg:grid grid-cols-2 gap-4 flex-wrap'>
+        {skills.map((skillCategory, i) => {
+          const [category, skills] = Object.entries(skillCategory)[0]
+          return <SkillCard category={category} skills={skills} />
+        })}
       </div>
       {/* </div> */}
     </motion.section>
