@@ -1,7 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link'
 import { CgMenuOreos } from 'react-icons/cg';
+import { easeIn, motion } from 'framer-motion';
+import { navVariant, gradVariant } from '../utils/motionVariants';
 import clsx from 'clsx';
+import NavLink from './NavLink';
+import Sidebar from './Sidebar';
 
 export default function Header() {
   const [showMenu, setShowMenu] = useState(false);
@@ -12,6 +17,8 @@ export default function Header() {
     function handleResize() {
       if(window.innerWidth > 640)
         setShowMenu(false);
+      else
+        setShowMenu(true)
       return null;
     }
 
@@ -25,54 +32,54 @@ export default function Header() {
   }
 
   return (
-    <header className='row-span-1 flex flex-row justify-between px-6 items-center shadow-md shadow-themeLightGrey'>
-      <div className='flex flex-row justify-start items-center'>
-        <Link to="/"><img src="/avatar.png" className='h-16 rounded-full mr-5' alt="" /></Link>
-        <h1 className=''>welcome to my portfolio</h1>
+    <motion.header
+      variants={navVariant}
+      initial="hide"
+      animate="show"
+      className='m-2 md:mt-8 sticky rounded-full top-0 z-20  bg-black flex flex-row justify-between px-6 py-2 items-center' id='home'
+    >
+      <motion.div
+        variants={gradVariant}
+        initial="hide"
+        animate="show"
+        className='fixed top-0 left-0 z-1 nav-gradient w-full h-[50px] blur-[60px] sm:blur-[80px]'
+      />
+      <HashLink to='/'>
+        <div className='flex flex-row justify-start items-center cursor-pointer'>
+          <h1 className='font-inter font-extrabold tracking-tighter z-10 hover:scale-[1.05] text-themeTextWhite'>NS</h1>
+        </div>
+      </HashLink>
+      <div className={clsx("hidden sm:flex flex-row gap-4 md:gap-6 z-10")} >
+        <NavLink name="About" location={location} />
+        <NavLink name="Projects" location={location} />
+        <NavLink name="Contact" location={location} />
       </div>
-      <div className={clsx(
-        "hidden sm:flex flex-row gap-4 md:gap-6 p-4")} >
-        <Link to="/" className={clsx(
-          'hover:text-themeCrimRed hover:scale-105',
-          { 'text-themeCrimRed scale-105' : location.pathname === '/'})}><p>Home</p></Link>
-        <Link to="/about" className={clsx(
-          'hover:text-themeCrimRed hover:scale-105',
-          { 'text-themeCrimRed scale-105' : location.pathname === '/about'})}><p>About</p></Link>
-        <Link to="/projects" className={clsx(
-          'hover:text-themeCrimRed hover:scale-105',
-          { 'text-themeCrimRed scale-105' : location.pathname === '/projects'})}><p>Projects</p></Link>
-        <Link to="/contact" className={clsx(
-          'hover:text-themeCrimRed hover:scale-105',
-          { 'text-themeCrimRed scale-105' : location.pathname === '/contact'})}><p>Contact</p></Link>
-      </div>
-      <CgMenuOreos className={clsx(
-        'block sm:hidden cursor-pointer',
-        {'hidden' : showMenu})} size={25} onClick={handleMenu}/>
-        {showMenu && (
-          <div className={clsx("absolute top-0 right-0 flex flex-col h-[150px]  w-28 bg-[#262626] rounded-bl-lg overflow-hidden")} onClick={handleMenu}>
-              <div className="hover:bg-themeCrimRed flex-1 flex items-center justify-center">
-                <Link to='/'>
-                  <p className='ml-2'>Home</p>
-                </Link>
-              </div>
-              <div className="hover:bg-themeCrimRed flex-1 flex items-center justify-center">
-                <Link to='/about'>
-                  <p className='ml-2'>About</p>
-                </Link>
-              </div>
-              <div className="hover:bg-themeCrimRed flex-1 flex items-center justify-center">
-                <Link to='/projects'>
-                  <p className='ml-2'>Projects</p>
-                </Link>
-              </div>
-              <div className="hover:bg-themeCrimRed flex-1 flex items-center justify-center">
-                <Link to='/contact'>
-                  <p className='ml-2'>Contact</p>
-                </Link>
-              </div>
-          </div>
-        )}
-      
-    </header>
+      <CgMenuOreos className={clsx('block sm:hidden cursor-pointer z-10')} size={25} onClick={handleMenu} />
+    </motion.header>
   )
 }
+
+{/* {showMenu && (
+        <div className={clsx("z-50 absolute top-0 right-0 flex flex-col h-[150px]  w-28 bg-[#262626] rounded-bl-lg overflow-hidden")} onClick={handleMenu}>
+          <div className="hover:bg-themeNeonGreen flex-1 flex items-center justify-center">
+            <HashLink to='#hero'>
+                  <p className='ml-2'>Home</p>
+            </HashLink>
+              </div>
+          <div className="hover:bg-themeNeonGreen flex-1 flex items-center justify-center">
+            <HashLink to='#about'>
+                  <p className='ml-2'>About</p>
+            </HashLink>
+              </div>
+          <div className="hover:bg-themeNeonGreen flex-1 flex items-center justify-center">
+            <HashLink to='#projects'>
+                  <p className='ml-2'>Projects</p>
+            </HashLink>
+              </div>
+          <div className="hover:bg-themeNeonGreen flex-1 flex items-center justify-center">
+            <HashLink to='#contact'>
+                  <p className='ml-2'>Contact</p>
+            </HashLink>
+              </div>
+          </div>
+      )} */}

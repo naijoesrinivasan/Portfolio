@@ -1,18 +1,53 @@
 import React from 'react';
+import { motion, useMotionTemplate, useMotionValue, useTransform } from 'framer-motion';
+import { slideFromLeft, slideFromRight, heroHover } from '../utils/motionVariants';
+import TypingText from './TypingText';
 
 export default function Hero() {
+  const x = useMotionValue(0)
+  const background = useTransform(
+    x,
+    [-100, 0, 100],
+    ["#059669", "#ffffff", "#059669"]
+  )
   return (
-    <main className='row-span-10 w-full flex flex-col-reverse md:flex-row'>
-      <div className='p-4 md:py-36 flex-1 md:px-24 flex flex-col items-center text-center'>
-        <h1 className='mb-2'>Naijoe Srinivasan | Full-Stack Developer</h1>
-        <p className=''>A versatile Full Stack Developer with a love for creating interactive, user-centric web 
-        applications. Whether it's building sleek front-end interfaces or designing scalable back-end systems, I strive to craft 
-        solutions that are both innovative and efficient. Explore my journey and the projects I've worked on!
+    <section className='z-10 relative section-paddings w-full flex flex-col-reverse justify-end gap-16 md:gap-24 md:flex-row md:h-screen' id='hero'>
+      {/* <div className='absolute top-[200px] hero-gradient text-white z-20 border-2 border-green-500 w-full h-1/2 rotate-180 blur-[200px]' /> */}
+      <motion.div
+        variants={slideFromLeft}
+        initial="hide"
+        animate="show"
+        className='z-30 gap-4 md:gap-8 flex flex-col justify-center  px-1'
+      >
+        <motion.div
+          style={{ color: background }}
+          transition={{ staggerChildren: 0.5 }}
+          className='text-themeHeadWhite hover:text-emerald-600 text-pretty'
+        >
+          <TypingText text="NAIJOE SRINIVASAN" />
+          <TypingText text="FULL STACK DEVELOPER" />
+        </motion.div>
+        <p>A versatile Full Stack Developer with a love for creating interactive, user-centric web 
+          applications. Let's build some cool apps together!
         </p>
-      </div>
-      <div className='py-4 md:py-20 md:px-10 flex-1 h-1/2 md:h-full flex flex-row justify-center items-center'>
-        <img src="/profile3.png" alt="" className='h-full rounded-xl md:rounded-3xl'/>
-      </div>
-    </main>
+      </motion.div>
+      <motion.div
+        variants={slideFromRight}
+        initial="hide"
+        animate="show"
+        className='z-30 shrink-0 flex flex-row justify-center items-center'
+      >
+        <motion.img
+          variants={heroHover}
+          whileHover="hover"
+          drag="x"
+          style={{ x }}
+          dragConstraints={{ left: 0, right: 0 }}
+          src="/naijoe-modified.jpg"
+          alt="Profile Picture"
+          className={`h-[300px] outline-dashed outline-offset-2 outline-emerald-600 sm:h-[400px] lg:h-[500px] aspect-square object-cover rounded-full`}
+        />
+      </motion.div>
+    </section>
   )
 }

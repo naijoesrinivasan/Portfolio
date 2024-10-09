@@ -1,44 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 @layer base {
     html,
     body {
-        @apply h-screen bg-themeDarkGrey text-themeLightGrey text-sm font-robotoMono subpixel-antialiased
-    }
-    #root {
-        @apply h-full
-    }
+        @apply w-full bg-themeDarkGrey text-themeTextWhite font-eudoxus subpixel-antialiased lg:max-w-[1280px] mx-auto scroll-smooth overflow-x-hidden sm:overflow-x-visible
+        }
     h1 {
-        @apply text-2xl font-arvo text-themeCrimRed
+        @apply text-2xl sm:text-3xl font-eudoxus text-themeHeadWhite font-semibold
     }
     h2 {
-        @apply text-lg font-arvo text-themeCrimRed
+        @apply text-lg sm:text-2xl font-eudoxus text-themeHeadWhite font-semibold
+        }
+        p {
+            @apply text-[16px] md:text-[18px] lg:text-[24px]
     }
     input,
     textarea {
-        @apply min-w-[300px] rounded-3xl p-2 text-themeCharcoal outline-none
+        @apply w-[350px] md:w-[450px] rounded-3xl p-2 text-themeTextWhite border border-opacity-30 border-themeNeonGreen bg-inherit focus:outline-none focus:border-opacity-80 md:min-w-[400px]
     }
     textarea {
-        @apply min-h-[250px]
-    }
-    @screen sm {
-        body {
-            @apply text-base
-        }
-        h1 {
-            @apply text-3xl
-        }
-        h2 {
-            @apply text-2xl
-        }
-    }
-    @screen md {
-        input,
-        textarea {
-            @apply min-w-[400px]
-        }
+        @apply h-[300px] md:h-[400px]
     }
 }
+.section-paddings {
+    @apply p-12 md:p-16 lg:p-20
+}
+
+.black-red-gradient {
+    background-image: linear-gradient(133deg, #121212 70%, #DC143C 89%);
+    filter: blur(120px);
+}
+
+.hero-gradient {
+    background: linear-gradient(97.86deg,
+            #121212 57%,
+            #DC143C 61.65%,
+            #00ff7f 100%);
+}
+
+.nav-gradient {
+    background: linear-gradient(90deg, #f5f5f5, #39ff14, #ff073a, #00f6ff, #c724b1, #f5f5f5, #fb923c);
+        /* opacity: 1; */
+    }
