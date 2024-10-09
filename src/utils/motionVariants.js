@@ -1,5 +1,5 @@
 import { duration } from "@mui/material"
-import { easeIn, easeInOut, transform } from "framer-motion"
+import { easeIn, easeInOut, filterProps, transform } from "framer-motion"
 
 export const slideFromLeft = {
   hide: {
@@ -11,7 +11,9 @@ export const slideFromLeft = {
     opacity: 1,
     transition: {
       duration: 1,
-      delay: 0.5
+      delay: 0.5,
+      staggerChildren: 1,
+      delayChildren: 1
     }
   }
 }
@@ -100,13 +102,12 @@ export const heroHover = {
 
 export const projectCardVariant = {
   tilt: {
-    rotateY: "360deg",
+    rotate: 0,
   },
   untilt :{
-    rotateY: 0,
+    rotate: 0,
     transition: {
-      duration: 1,
-      delay: 3
+      duration: 0.8,
     }
   }
 }
@@ -134,4 +135,34 @@ export const glitchVariants = {
       ease: 'easeInOut',
     },
   },
+};
+
+export const descVariant = {
+  hide: {
+    height: 0,
+    opacity: 0,
+    transition: {
+      duration: 0.3,
+      ease: "easeInOut",
+    },
+  },
+  show: {
+    height: "auto",
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+      delay: 0.2,
+      ease: "easeInOut",
+    },
+  },
+};
+
+export const typingVariants = {
+  hidden: { opacity: 0 },
+  visible: (i) => ({
+    opacity: 1,
+    transition: {
+      delay: i * 0.08, // Staggered delay, adjust to control typing speed
+    }
+  }),
 };

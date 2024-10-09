@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion, useMotionTemplate, useMotionValue, useTransform } from 'framer-motion';
 import { slideFromLeft, slideFromRight, heroHover } from '../utils/motionVariants';
+import TypingText from './TypingText';
 
 export default function Hero() {
   const x = useMotionValue(0)
@@ -15,18 +16,25 @@ export default function Hero() {
       <motion.div
         variants={slideFromLeft}
         initial="hide"
-        whileInView="show"
-        className='z-30 gap-4 md:gap-8 flex flex-col justify-center'
+        animate="show"
+        className='z-30 gap-4 md:gap-8 flex flex-col justify-center  px-1'
       >
-        <motion.h1 style={{ color: background }} className='text-themeHeadWhite hover:text-emerald-600'>NAIJOE SRINIVASAN | FULL STACK DEVELOPER</motion.h1>
-        <p className=''>A versatile Full Stack Developer with a love for creating interactive, user-centric web 
+        <motion.div
+          style={{ color: background }}
+          transition={{ staggerChildren: 0.5 }}
+          className='text-themeHeadWhite hover:text-emerald-600 text-pretty'
+        >
+          <TypingText text="NAIJOE SRINIVASAN" />
+          <TypingText text="FULL STACK DEVELOPER" />
+        </motion.div>
+        <p>A versatile Full Stack Developer with a love for creating interactive, user-centric web 
           applications. Let's build some cool apps together!
         </p>
       </motion.div>
       <motion.div
         variants={slideFromRight}
         initial="hide"
-        whileInView="show"
+        animate="show"
         className='z-30 shrink-0 flex flex-row justify-center items-center'
       >
         <motion.img
@@ -37,7 +45,7 @@ export default function Hero() {
           dragConstraints={{ left: 0, right: 0 }}
           src="/naijoe-modified.jpg"
           alt="Profile Picture"
-          className={`h-[300px] outline-dashed outline-offset-2 outline-emerald-600 sm:h-[440px] lg:h-[500px] aspect-square object-cover rounded-full`}
+          className={`h-[300px] outline-dashed outline-offset-2 outline-emerald-600 sm:h-[400px] lg:h-[500px] aspect-square object-cover rounded-full`}
         />
       </motion.div>
     </section>

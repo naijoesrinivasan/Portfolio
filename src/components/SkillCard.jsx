@@ -11,7 +11,7 @@ export default function SkillCard({ category, skills }) {
   console.log("Category: ", category)
   console.log("Skill: ", skills)
   return (
-    <div className="flex flex-col gap-2 px-4 py-2 rounded-xl outline-dashed outline-inset-2 outline-emerald-600">
+    <div className="flex flex-col gap-2 lg:gap-4 px-4 py-2 rounded-xl outline-dashed outline-inset-2 outline-emerald-600">
       <p>{category}</p>
       <SkillIcon skills={skills} />
     </div>

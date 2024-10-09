@@ -36,7 +36,7 @@ export default function Header() {
       variants={navVariant}
       initial="hide"
       animate="show"
-      className='m-2 md:mt-8 sticky rounded-full top-0 z-20  bg-black flex flex-row justify-between px-6 py-2 items-center ' id='home'
+      className='m-2 md:mt-8 sticky rounded-full top-0 z-20  bg-black flex flex-row justify-between px-6 py-2 items-center' id='home'
     >
       <motion.div
         variants={gradVariant}
@@ -46,7 +46,7 @@ export default function Header() {
       />
       <HashLink to='/'>
         <div className='flex flex-row justify-start items-center cursor-pointer'>
-          <h2 className='font-inter font-extrabold tracking-tighter z-10 hover:scale-[1.05] text-themeTextWhite'>NS</h2>
+          <h1 className='font-inter font-extrabold tracking-tighter z-10 hover:scale-[1.05] text-themeTextWhite'>NS</h1>
         </div>
       </HashLink>
       <div className={clsx("hidden sm:flex flex-row gap-4 md:gap-6 z-10")} >

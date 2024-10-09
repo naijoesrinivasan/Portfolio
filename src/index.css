@@ -7,44 +7,23 @@
 @layer base {
     html,
     body {
-        @apply w-[100vw] bg-themeDarkGrey text-themeTextWhite font-eudoxus subpixel-antialiased lg:max-w-[1280px] mx-auto overflow-x-hidden sm:overflow-x-visible
+        @apply w-full bg-themeDarkGrey text-themeTextWhite font-eudoxus subpixel-antialiased lg:max-w-[1280px] mx-auto scroll-smooth overflow-x-hidden sm:overflow-x-visible
         }
-    #root {
-        @apply w-full h-fit
-    }
     h1 {
-        @apply text-2xl font-eudoxus text-themeHeadWhite font-semibold
+        @apply text-2xl sm:text-3xl font-eudoxus text-themeHeadWhite font-semibold
     }
     h2 {
-        @apply text-lg font-eudoxus text-themeHeadWhite font-semibold
+        @apply text-lg sm:text-2xl font-eudoxus text-themeHeadWhite font-semibold
         }
-        
         p {
             @apply text-[16px] md:text-[18px] lg:text-[24px]
     }
     input,
     textarea {
-        @apply w-[300px] md:w-[450px] rounded-3xl p-2 text-themeTextWhite border border-opacity-30 border-themeNeonGreen bg-inherit focus:outline-none focus:border-opacity-80
+        @apply w-[350px] md:w-[450px] rounded-3xl p-2 text-themeTextWhite border border-opacity-30 border-themeNeonGreen bg-inherit focus:outline-none focus:border-opacity-80 md:min-w-[400px]
     }
     textarea {
-        @apply h-[250px] md:h-[400px]
-    }
-    @screen sm {
-        body {
-            @apply text-base
-        }
-        h1 {
-            @apply text-3xl
-        }
-        h2 {
-            @apply text-2xl
-        }
-    }
-    @screen md {
-        input,
-        textarea {
-            @apply min-w-[400px]
-        }
+        @apply h-[300px] md:h-[400px]
     }
 }
 .section-paddings {

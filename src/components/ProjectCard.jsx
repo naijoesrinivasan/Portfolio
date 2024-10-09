@@ -1,18 +1,28 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { FaGithub } from 'react-icons/fa'
 import { CgLivePhoto } from 'react-icons/cg'
-import { motion } from 'framer-motion'
-import { projectCardVariant } from '../utils/motionVariants'
+import { motion, useScroll } from 'framer-motion'
+import { projectCardVariant, descVariant } from '../utils/motionVariants'
 
 export default function ProjectCard({ name, imgUrl, desc, stack, demoUrl, githubUrl }) {
+  const { scrollYProgress } = useScroll();
+  useEffect(() => {
+    console.log("Y Progress: ", scrollYProgress)
+  }, [scrollYProgress])
+  console.log("Scroll y progress: ", scrollYProgress)
   return (
     <motion.div
       variants={projectCardVariant}
       initial="tilt"
       whileHover="untilt"
-      className="gap-6 flex flex-col items-center w-fit p-4 md:p-6 lg:p-10 outline-dashed outline-themeNeonGreen rounded-md">
+      className="gap-6 bg-transparent backdrop-filter flex flex-col items-center w-fit p-4 md:p-6 lg:p-10 outline-dashed outline-themeNeonGreen rounded-md">
       <img src={imgUrl} alt="" className='rounded-xl object-contain' />
-      <div className='flex flex-col gap-6 lg:gap-8 md:gap-4 items-center'>
+      <motion.div
+        variants={descVariant}
+        initial="hide"
+        whileInView="show"
+        className='flex flex-col gap-6 lg:gap-8 md:gap-4 items-center'
+      >
         <p>{desc}</p>
         {/* <p className='flex gap-1 flex-wrap'>
           <span className='text-themeHeadWhite font-semibold'>Tech Stack: </span>
@@ -32,7 +42,7 @@ export default function ProjectCard({ name, imgUrl, desc, stack, demoUrl, github
             </button>
           </a>
         </div>
-      </div>
+      </motion.div>
     </motion.div>
   )
 }
