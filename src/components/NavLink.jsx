@@ -1,18 +1,18 @@
 import React from 'react'
-// import { HashLink } from 'react-router-dom'
 import { Link } from 'react-scroll';
 import clsx from 'clsx'
 
-export default function NavLink({ location, name }) {
+export default function NavLink({ location, name, setShowSideBar }) {
   const targetHash = name === 'Home' ? 'hero' : `${name.toLowerCase()}`
   return (
     <Link
       to={targetHash}
       smooth={true}
-      duration={300}
+      duration={200}
       className={clsx(
-        'hover:text-themeNeonGreen hover:scale-105 cursor-pointer',
+        'text-themeNeonGreen sm:text-themeTextWhite hover:text-themeNeonGreen hover:scale-105 cursor-pointer z-10',
         { 'text-themeNeonGreen scale-105': location.hash === `#${name.toLowerCase()}` })}
+      onClick={() => setShowSideBar(false)}
     >
       <p className='lg:text-[18px]'>{name}</p>
     </Link>

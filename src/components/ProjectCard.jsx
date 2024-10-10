@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { FaGithub } from 'react-icons/fa'
 import { CgLivePhoto } from 'react-icons/cg'
 import { motion, useScroll } from 'framer-motion'
@@ -6,10 +6,7 @@ import { projectCardVariant, descVariant } from '../utils/motionVariants'
 
 export default function ProjectCard({ name, imgUrl, desc, stack, demoUrl, githubUrl }) {
   const { scrollYProgress } = useScroll();
-  useEffect(() => {
-    console.log("Y Progress: ", scrollYProgress)
-  }, [scrollYProgress])
-  console.log("Scroll y progress: ", scrollYProgress)
+
   return (
     <motion.div
       variants={projectCardVariant}

@@ -5,9 +5,8 @@
 @tailwind components;
 @tailwind utilities;
 @layer base {
-    html,
     body {
-        @apply w-full bg-themeDarkGrey text-themeTextWhite font-eudoxus subpixel-antialiased lg:max-w-[1280px] mx-auto scroll-smooth overflow-x-hidden sm:overflow-x-visible
+        @apply w-full bg-themeDarkGrey text-themeTextWhite font-eudoxus subpixel-antialiased lg:max-w-[1280px] mx-auto scroll-smooth overflow-x-hidden
         }
     h1 {
         @apply text-2xl sm:text-3xl font-eudoxus text-themeHeadWhite font-semibold

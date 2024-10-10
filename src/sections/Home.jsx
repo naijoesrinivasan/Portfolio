@@ -1,6 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import { Outlet, useLocation, Link } from 'react-router-dom';
-import { GrFormNext, GrFormPrevious } from 'react-icons/gr';
+import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Hero from '../components/Hero';

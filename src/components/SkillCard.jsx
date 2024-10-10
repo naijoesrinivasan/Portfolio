@@ -1,15 +1,7 @@
 import React from 'react'
-import { FaGithub } from 'react-icons/fa';
-import { CgLivePhoto } from 'react-icons/cg';
-import { Rating } from '@mui/material';
-import clsx from 'clsx';
-import { motion } from 'framer-motion';
-import { div } from 'framer-motion/client';
 import SkillIcon from './SkillIcon';
 
 export default function SkillCard({ category, skills }) {
-  console.log("Category: ", category)
-  console.log("Skill: ", skills)
   return (
     <div className="flex flex-col gap-2 lg:gap-4 px-4 py-2 rounded-xl outline-dashed outline-inset-2 outline-emerald-600">
       <p>{category}</p>
