@@ -15,7 +15,7 @@ export default function Contact() {
 
   function handleChange(e)  {
     const { name, value } = e.target;
-    console.log(name, value);
+
     setFormData(prevFormData => ({
       ...prevFormData,
       [name]: value

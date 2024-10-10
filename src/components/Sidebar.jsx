@@ -1,13 +1,12 @@
 import React from 'react'
-import { HashLink } from 'react-router-hash-link/dist/react-router-hash-link.cjs.production'
+import NavLink from './NavLink'
 
-export default function Sidebar() {
+export default function SideBar({ location }) {
   return (
-    <section className='z-20 flex flex-col fixed top-0 right-0 h-screen w-[30%] rounded-lg overflow-auto bg-themeDarkGrey'>
-      <HashLink>Home</HashLink>
-      <HashLink>About</HashLink>
-      <HashLink>Projects</HashLink>
-      <HashLink>Contact</HashLink>
+    <section className='fixed top-0 right-0 h-screen flex flex-col w-[70%] rounded-lg overflow-auto bg-themeDarkGrey'>
+      <NavLink location={location} name="About">About</NavLink>
+      <NavLink location={location} name="Projects">Projects</NavLink>
+      <NavLink location={location} name="Contact">Contact</NavLink>
     </section>
   )
 }
