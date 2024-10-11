@@ -7,7 +7,7 @@ function App() {
     {
       path: "/",
       element: <Home />,
-      errorElement: <Error />
+      // errorElement: <Error />
     },
     {
       path: "*",
