@@ -8,6 +8,10 @@ function App() {
       path: "/",
       element: <Home />,
       errorElement: <Error />
+    },
+    {
+      path: "*",
+      element: <Error />
     }
   ])
   return (

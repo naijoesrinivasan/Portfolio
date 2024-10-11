@@ -51,13 +51,13 @@ export default function Header() {
       variants={navVariant}
       initial="hide"
       animate="show"
-      className='m-2 md:mt-8 sticky rounded-full top-0 z-10  bg-black flex flex-row flex-wrap justify-between px-6 py-2 items-center' id='home'
+      className='m-2 md:mt-8 sticky rounded-full top-0 z-10 bg-black flex flex-row flex-wrap justify-between px-6 py-2 items-center' id='home'
     >
       <motion.div
         variants={gradVariant}
         initial="hide"
         animate="show"
-        className='fixed top-0 left-0 z-1 nav-gradient w-full h-[50px] blur-[60px] sm:blur-[80px]'
+        className='fixed top-0 left-0 z-1 nav-gradient w-full h-[50px] blur-[50px] sm:blur-[70px]'
       />
       <div>
         <HashLink to='/'>
