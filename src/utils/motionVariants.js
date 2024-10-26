@@ -1,6 +1,3 @@
-import { duration } from "@mui/material"
-import { easeIn, easeInOut, filterProps, transform } from "framer-motion"
-
 export const slideFromLeft = {
   hide: {
     // x: "-100vw",
@@ -74,8 +71,8 @@ export const navVariant = {
     y: 0,
     opacity: 1,
     transition: {
-      delay: 1.5,
-      duration: 1,
+      delay: 1,
+      duration: 1.5,
       ease: "easeOut"
     }
   }
@@ -89,7 +86,8 @@ export const gradVariant = {
     opacity: 1,
     transition: {
       delay: 2.5,
-      duration: 1
+      duration: 1,
+      ease: 'easeInOut'
     }
   }
 }
@@ -139,19 +137,19 @@ export const glitchVariants = {
 
 export const descVariant = {
   hide: {
-    height: 0,
+    width: 0,
     opacity: 0,
     transition: {
-      duration: 0.3,
+      duration: 1,
       ease: "easeInOut",
     },
   },
   show: {
-    height: "auto",
+    width: "auto",
     opacity: 1,
     transition: {
-      duration: 0.5,
-      delay: 0.2,
+      duration: 1.2,
+      delay: 1,
       ease: "easeInOut",
     },
   },
@@ -162,7 +160,7 @@ export const typingVariants = {
   visible: (i) => ({
     opacity: 1,
     transition: {
-      delay: i * 0.08, // Staggered delay, adjust to control typing speed
+      delay: i * 0.1, // Staggered delay, adjust to control typing speed
     }
   }),
 };

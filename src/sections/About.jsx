@@ -1,4 +1,3 @@
-import React from 'react';
 import { IoMdDownload } from 'react-icons/io';
 import SkillCard from '../components/SkillCard';
 import { motion } from 'framer-motion';
@@ -19,11 +18,9 @@ export default function About() {
         className='z-5 gap-4 md:gap-8 flex flex-col justify-center'
       >
         <h1>About Me</h1>
-        <p>I'm a versatile Software Developer, self-taught in modern technologies like React, Next.js, and Express. 
-        With experience in full stack development, I’ve worked on everything from API integrations to optimizing ETL pipelines. 
-        My projects prioritize SEO, accessibility, and responsive design, ensuring top-notch user experiences. From building web apps to 
-        analyzing large datasets, I thrive on solving challenges across different domains. Lately, I've been diving into Three.js to add 
-        more interactive 3D elements to my projects.</p>
+        <p>I’m a full-stack developer who loves building fast, SEO-friendly apps with tools like Next.js, React, Angular, and Tailwind CSS. On the backend, I work comfortably with Node.js, Express, and various SQL and NoSQL databases like PostgreSQL, MongoDB, and Firebase.
+
+From building a Spotify clone and Threads app clone to creating a 3D solar system with Three.js, I enjoy tackling projects that blend performance with creativity. I’ve also dipped into machine learning through an internship at NUS and worked with ETL pipelines for insurance data. With a wide range of tools in my belt, I’m excited to take on new challenges in full-stack and software engineering roles.</p>
         <button 
           className='border border-themeNeonGreen px-4 py-2 h-10 w-[180px] flex items-center gap-1 rounded-md hover:bg-themeNeonGreen hover:bg-opacity-50'
           onClick={openResume}

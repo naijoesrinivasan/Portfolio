@@ -7,16 +7,8 @@ export default {
     theme: {
         extend: {
             colors: {
-                themeDarkGrey: "#121212",
-                themeCharcoal: "#1a1a1a",
-                themeLightGrey: "#f5f5f5",
+                themeDarkGrey: "#0D0D0D",
                 themeNeonGreen: "#059669",
-                themeSpringGreen: "#00ff7f",
-                themeCrimRed: "#DC143C",
-                themeFirebrick: "#B22222",
-                themeRubyRed: "#9B111E",
-                themeDarkRed: "#8B0000",
-                themeIndianRed: "#CD5C5C",
                 themeHeadWhite: "#ffffff",
                 themeTextWhite: "#c7c7c7"
             },

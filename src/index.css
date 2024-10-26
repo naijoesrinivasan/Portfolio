@@ -12,10 +12,10 @@
         @apply text-2xl sm:text-3xl font-eudoxus text-themeHeadWhite font-semibold
     }
     h2 {
-        @apply text-lg sm:text-2xl font-eudoxus text-themeHeadWhite font-semibold
+        @apply text-lg sm:text-2xl font-eudoxus text-themeNeonGreen font-semibold
         }
         p {
-            @apply text-[16px] md:text-[18px] lg:text-[24px]
+            @apply text-[16px] md:text-[18px] 
     }
     input,
     textarea {
@@ -24,6 +24,10 @@
     textarea {
         @apply h-[300px] md:h-[400px]
     }
+}
+
+.demo-live-btn {
+    @apply border border-themeNeonGreen rounded-md h-10 w-24 flex items-center gap-2 justify-center hover:bg-themeNeonGreen hover:bg-opacity-50
 }
 .section-paddings {
     @apply p-12 md:p-16 lg:p-20
