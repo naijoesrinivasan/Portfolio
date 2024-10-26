@@ -1,7 +1,8 @@
+import PropTypes from "prop-types";
 import { motion } from "framer-motion";
 import { typingVariants } from "../utils/motionVariants";
 
-export default function TypingText({ text, background }) {
+function TypingText({ text }) {
   const characters = text.split("")
 
   return (
@@ -22,3 +23,9 @@ export default function TypingText({ text, background }) {
     </h1>
   )
 }
+
+TypingText.propTypes = {
+  text: PropTypes.string.isRequired,
+}
+
+export default TypingText;

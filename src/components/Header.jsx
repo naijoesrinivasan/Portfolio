@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link'
 import { CgMenuOreos } from 'react-icons/cg';
@@ -51,7 +51,8 @@ export default function Header() {
       variants={navVariant}
       initial="hide"
       animate="show"
-      className='m-2 md:mt-8 sticky rounded-full top-0 z-10 bg-black flex flex-row flex-wrap justify-between px-6 py-2 items-center' id='home'
+      className='m-2 md:mt-8 sticky rounded-full top-0 z-10 bg-black flex flex-row flex-wrap justify-between px-6 py-2 items-center' 
+      id='home'
     >
       <motion.div
         variants={gradVariant}
@@ -78,7 +79,7 @@ export default function Header() {
         <motion.div
           initial={{ y: "-100%" }}
           animate={{ y: 0 }}
-          transition={{ duration: 1, delay: 0.2, type: "tween" }}
+          transition={{ duration: 0.8, delay: 0.2, type: "tween" }}
           className='fixed top-0 left-0 right-0 z-30 bg-themeDarkGrey w-full h-screen '
         >
           <div className={clsx("flex flex-col items-center justify-center h-full gap-4 md:gap-6 z-20")} >
@@ -92,28 +93,3 @@ export default function Header() {
     </motion.header>
   )
 }
-
-{/* {showMenu && (
-        <div className={clsx("z-50 absolute top-0 right-0 flex flex-col h-[150px]  w-28 bg-[#262626] rounded-bl-lg overflow-hidden")} onClick={handleMenu}>
-          <div className="hover:bg-themeNeonGreen flex-1 flex items-center justify-center">
-            <HashLink to='#hero'>
-                  <p className='ml-2'>Home</p>
-            </HashLink>
-              </div>
-          <div className="hover:bg-themeNeonGreen flex-1 flex items-center justify-center">
-            <HashLink to='#about'>
-                  <p className='ml-2'>About</p>
-            </HashLink>
-              </div>
-          <div className="hover:bg-themeNeonGreen flex-1 flex items-center justify-center">
-            <HashLink to='#projects'>
-                  <p className='ml-2'>Projects</p>
-            </HashLink>
-              </div>
-          <div className="hover:bg-themeNeonGreen flex-1 flex items-center justify-center">
-            <HashLink to='#contact'>
-                  <p className='ml-2'>Contact</p>
-            </HashLink>
-              </div>
-          </div>
-      )} */}

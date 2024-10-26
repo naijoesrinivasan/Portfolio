@@ -1,13 +1,13 @@
 export const projects = [
   {
-    name: "3D Solar System",
-    imgUrl: "/solar.png",
-    desc: "A 3D solar system simulation built with Three.js, featuring realistic orbital mechanics, planet sizes, \
-          and lighting effects. The simulation includes all eight planets, Pluto, the Sun, and ambient lighting. The planets \
-          orbit around the Sun and rotate on their own axes at realistic speeds, with exaggerated sizes for better visibility.",
-    stack: ["JavaScript", "WebGL", "Three.js" ],
-    demoUrl: "https://solar-system-lime-ten.vercel.app/",
-    githubUrl: "https://github.com/naijoesrinivasan/Solar-System"
+    name: "Tesserax",
+    imgUrl: "/tesserax.png",
+    desc: "Tesserax is a social platform built with Next.js and MongoDB, offering authentication via Clerk and real-time event \
+     listening with webhooks. It features thread creation, nested comments, community management, and server-side rendering for \
+     optimal performance and SEO.",
+    stack: ["Next.js", "React", "Tailwind CSS", "MongoDB", "Webhooks", 'Clerk'],
+    demoUrl: "https://github.com/naijoesrinivasan/tesserax",
+    githubUrl: "https://github.com/naijoesrinivasan/tesserax"
   },
   {
     name: "Jam-Jam",
@@ -17,6 +17,16 @@ export const projects = [
     stack: ["React", "Express", "Tailwind", "MongoDB"],
     demoUrl: "",
     githubUrl: "https://github.com/naijoesrinivasan/jam-jam"
+  },
+  {
+    name: "3D Solar System",
+    imgUrl: "/solar.png",
+    desc: "A 3D solar system simulation built with Three.js, featuring realistic orbital mechanics, planet sizes, \
+          and lighting effects. The simulation includes all eight planets, Pluto, the Sun, and ambient lighting. The planets \
+          orbit around the Sun and rotate on their own axes at realistic speeds, with exaggerated sizes for better visibility.",
+    stack: ["JavaScript", "WebGL", "Three.js" ],
+    demoUrl: "https://solar-system-lime-ten.vercel.app/",
+    githubUrl: "https://github.com/naijoesrinivasan/Solar-System"
   },
   {
     name: "Metaverse Madness",
@@ -38,23 +48,6 @@ export const projects = [
     demoUrl: "https://next-dashboard-dusky-three.vercel.app/",
     githubUrl: "https://github.com/naijoesrinivasan/next-dashboard"
   },
-  {
-    name: "Notes Clone",
-    imgUrl: "/notes.png",
-    desc: "A note-taking application built with React and ReactMDE, allowing users to create, edit, and format notes in Markdown. All notes are stored and synced using Firebase Firestore for real-time updates.",
-    stack: ["React", "CSS", "Firebase"],
-    demoUrl: "https://main--custom-notes123.netlify.app/",
-    githubUrl: "https://github.com/naijoesrinivasan/notes-app"
-  },
-  {
-    name: "Van Rental Application",
-    imgUrl: "/crestline.png",
-    desc: "A camping van rental platform where users can browse and rent vans, and van owners can \
-          host their listings. Built with React and Firebase for real-time data management and user authentication.",
-    stack: ["React", "CSS", "Firebase"],
-    demoUrl: "https://master--cozy-biscuit-cf55c3.netlify.app/",
-    githubUrl: "https://github.com/naijoesrinivasan/vanlife"
-  }
 ]
 
 export const skills = [

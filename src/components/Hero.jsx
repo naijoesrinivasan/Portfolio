@@ -1,35 +1,28 @@
-import React from 'react';
-import { motion, useMotionTemplate, useMotionValue, useTransform } from 'framer-motion';
+import { motion, useMotionValue  } from 'framer-motion';
 import { slideFromLeft, slideFromRight, heroHover } from '../utils/motionVariants';
 import TypingText from './TypingText';
 
 export default function Hero() {
   const x = useMotionValue(0)
-  const background = useTransform(
-    x,
-    [-100, 0, 100],
-    ["#059669", "#ffffff", "#059669"]
-  )
   return (
-    <section className='z-5 relative section-paddings w-full flex flex-col-reverse justify-end gap-16 md:gap-24 md:flex-row md:h-screen' id='hero'>
-      {/* <div className='absolute top-[200px] hero-gradient text-white z-20 border-2 border-green-500 w-full h-1/2 rotate-180 blur-[200px]' /> */}
+    <section 
+      className='z-5 relative section-paddings w-full flex flex-col-reverse justify-end gap-16 md:gap-24 md:flex-row md:h-screen' 
+      id='hero'
+    >
       <motion.div
         variants={slideFromLeft}
         initial="hide"
         animate="show"
-        className='z-5 gap-4 md:gap-8 flex flex-col justify-center  px-1'
+        transition={{ staggerChildren: 0.8 }}
+        className='z-5 gap-4 md:gap-8 flex flex-col justify-center px-1'
       >
         <motion.div
-          style={{ color: background }}
-          transition={{ staggerChildren: 0.5 }}
           className='text-themeHeadWhite hover:text-emerald-600 text-pretty z-5'
         >
           <TypingText text="NAIJOE SRINIVASAN" />
           <TypingText text="FULL STACK DEVELOPER" />
         </motion.div>
-        <p>A versatile Full Stack Developer with a love for creating interactive, user-centric web 
-          applications. Let's build some cool apps together!
-        </p>
+        <p>Building visually stunning, highly-performant full-stack applications with a passion for seamless user experiences and optimized backend solutions.</p>
       </motion.div>
       <motion.div
         variants={slideFromRight}
