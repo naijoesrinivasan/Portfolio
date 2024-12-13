@@ -5,7 +5,7 @@ import { skills } from '../utils/data';
 
 export default function About() {
   function openResume() {
-    window.open('Naijoe Srinivasan_FullStack Developer.pdf')
+    window.open('Naijoe Srinivasan - Software Engineer.pdf')
   }
 
   return (
