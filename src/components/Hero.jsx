@@ -22,7 +22,7 @@ export default function Hero() {
           <TypingText text="NAIJOE SRINIVASAN" />
           <TypingText text="FULL STACK DEVELOPER" />
         </motion.div>
-        <p>Building visually stunning, highly-performant full-stack applications with a passion for seamless user experiences and optimized backend solutions.</p>
+        <p>Building visually stunning, highly scalable and secure systems with a passion for seamless user experiences and optimized backend solutions.</p>
       </motion.div>
       <motion.div
         variants={slideFromRight}

@@ -13,14 +13,14 @@ export default function ProjectCard({
   githubUrl 
 }) {
   return (
-    <div className="gap-6 bg-black hover:shadow-md hover:shadow-themeNeonGreen  flex flex-col p-4 md:p-6 lg:p-10 cursor-default rounded-md">
+    <div className="gap-6 bg-black hover:shadow-md hover:shadow-themeNeonGreen  flex flex-col p-4 md:p-6 lg:p-10 cursor-default">
       <h2>{name}</h2>
       <div className="flex flex-col md:flex-row gap-4">
         <div className="grow-1">
           <img 
             src={imgUrl} 
             alt="" 
-            className='rounded-xl w-full' 
+            className='w-full' 
           />
         </div>
         <motion.div
